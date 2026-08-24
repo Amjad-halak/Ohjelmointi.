@@ -1,0 +1,341 @@
+x = 1
+print(x)
+x = x + 19
+print(x)
+
+print("done (3)")
+
+x = 19
+if x < 10:
+    print("smaller")
+if x > 10:
+    print("biger")
+
+print("done (4)")
+
+hours = 101
+rant = 7.5
+pay = hours * rant
+print(pay)
+
+x = 9
+y = 25 * (1 - x) * 11 / 112
+print(y)
+
+print("done 5")
+
+x = 212 * 5
+print(x)
+y = 12 ** 2
+print(y)
+z = 23 % 5
+print(z)
+a = 20 / 5
+c = 23 / 5
+print(a)
+print(c)
+
+g = 'amjad' + ' alhalak'
+print(g)
+
+x = 1
+type(x)
+print("x= class 'int'")
+
+z = 4.6
+type(z)
+print("z= class 'float'")
+
+g = "amjad alhalak"
+type(g)
+print("g= class 'str'")
+
+print(float(99) + 100)
+
+i = 19
+e = float(i)
+print(e)
+
+svl = '123'
+print(int(svl) + 1)
+
+print("because there is the dot up ")
+
+name = input("what is ur name  :")
+love = input("how much you like when u see she in paivakoti  :")
+
+print("welcome", name, love)
+
+print("the first brograme")
+
+x = input("where u are to know the floor in building :")
+if x == "usa":
+    print("the first floor start from (1)")
+elif x == "ero":
+    print("the first floor start from (0)")
+else:
+    print("sorry u have to but if u are in (usa) or (ero)")
+
+print("done 6")
+
+x = 13
+if x >= 10:
+    print("oldd anas is 24")
+if x <= 12:
+    print("amjad old is 42")
+if x != 14:
+    print("aya old is 20")
+if x > 20:
+    print("rama is the best")
+
+x = 42
+if x > 1:
+    print("more them one")
+    if x < 100:
+        print(" less then 100 ")
+print(" all done")
+
+print('done 7')
+
+print("by elif u can print it for how many u want")
+
+print("float number is : 1 . 2 . 3 ...")
+print("int number is : 1,1 . 1,25 . 0,9 ...")
+
+try:
+    temp = "5 degrees"
+    cel = 0
+    fahr = float(temp)
+    cel = (fahr - float(32)) * 5.0 / 9.0
+    print(cel)
+except:
+    print("something went wrong")
+
+try:
+    numerot = int(input("enter any numper u want"))
+    numero = int(input("enter any number u want by"))
+    x = nomerot / numero
+    print(x)
+except:
+    print("if it is wrong will skip every thing and just try the program")
+
+    print("done8")
+
+    x = float(input("how many hours do u work :  "))
+y = float(input("what u take per hours "))
+amjad = x * y
+if x < 100:
+    ("regulare")
+else:
+    print("over time ")
+print(amjad)
+
+print("the float is important")
+
+print("the def")
+
+
+def thing():
+    print("hello ")
+    print("word ")
+
+
+thing()
+print("wiwthout [thing()] it is dont print any thing")
+
+big = max("hello word")
+tiny = min("hello word")
+print(big)
+print(tiny)
+
+x = max(1, 10, 7, 12)
+y = min(1, 10, 7, 12)
+print(x)
+print(y)
+
+print("done 9 ")
+
+g = 29
+print(g + 1)
+
+
+def anythink():
+    print('amjad is will by a ohjlminti')
+    print(1 - 1)
+
+
+y = input("do u will stop of doing this :")
+print(y)
+x = g * 11
+print(x)
+
+anythink()
+
+
+def great(sj):
+    if sj == "es":
+        print("hola")
+    elif sj == "er":
+        print('hella')
+    else:
+        print('hello')
+
+
+great('er')
+
+great("es")
+
+great("ee")
+
+print("done 10")
+
+n = 5
+while n > 0:
+    print(n)
+    n = n - 1
+print("amjad")
+print(n)
+
+while True:
+    line = input(">")
+    if line == 'done':
+        break
+    print("line")
+print("done")
+
+print("break : go out from the loop")
+print("continue: stop the Repetition التكرار  or skip teh step ")
+
+n = 0
+while True:
+    if n == 3:
+        break
+    print(n)
+    n = n + 1
+
+print("done 11 ")
+
+print("the for loops ")
+x = ['1,13,4,77,82']
+u = [1, 13, 4, 77, 82]
+for y in x:
+    print(y)
+
+print("first look because the ''  ")
+
+for t in u:
+    print(t)
+
+print("secound look at x and u ")
+
+freinds = ['amjad', 'owes', 'zaid']
+for freind in freinds:
+    print("i love when we was a child :", freind)
+
+print("theids test ")
+for i in [2, 1, 5]:
+    print(i)
+    if i == 1:
+        break
+
+print("done 12 ")
+
+print("amjad")
+x = [1, 41, 55, 21, 12]
+for thing in x:
+    print(thing)
+
+    print("done ")
+
+largest = 0
+for the_x in [12, 41, 33, 2, 77]:
+    if the_x > largest:
+        largest = the_x
+    print(largest, the_x)
+    print('the bigest num is', largest)
+
+smallest = None
+print("Before:", smallest)
+for itervar in [3, 41, 12, 9, 74, 15]:
+    if smallest is None or itervar < smallest:
+        smallest = itervar
+
+    print("Loop:", itervar, smallest)
+print("Smallest:", smallest)
+
+
+print("done 13")
+
+zork=0
+print("beffor" , zork)
+for thing in [12,22,341,54,767,23,1]:
+    zork=zork+1
+    print(zork , thing)
+print("affter", zork)
+
+
+
+jj=0
+for ddd in [12,323,4,15,6,12,333,0]:
+    jj=jj+ddd
+    print(jj , ddd )
+print('after',jj)
+
+count=0
+sum=0
+for amjad in [1,123,2,5,412,44,23]:
+    count=count+amjad
+    sum=sum+1
+    print(sum , count , amjad )
+print('after',sum , count , amjad )
+
+amjad =0
+print ("amjad")
+for x in [123,22,444,512,123,1]:
+    if amjad < x :
+        amjad = x
+        print('largest number is ' , x)
+
+print ("the most importanat ")
+smalest = None
+for x in [231,45,320,12,11,5,1]:
+    if smalest is None :
+        smalest = x
+    elif smalest > x :
+        smalest = x
+    print(smalest , x )
+    
+print("done 14")
+
+
+
+fruit= "banana"
+letters= fruit[1]
+print(letters)
+x=3
+w=fruit[x-1]
+print(w)
+try:
+    zot = "abd"
+    print(zot[5])
+except :
+    print("it is wrong")
+
+
+print(len("banana"))
+
+fruit ="banana"
+index=0
+while index <len(fruit):
+    letters = fruit[index]
+    print(index , letters)
+    index=index+1
+
+for x in "banana":
+    print(x)
+
+
+
+print("done 15 ")
+
+
