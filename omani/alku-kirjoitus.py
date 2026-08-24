@@ -96,23 +96,6 @@ print("done 9")
 
 
 
-kertolasku = 212 * 5
-print(kertolasku)
-
-potenssiinkorotus = 12 ** 2  # esi 12^2
-print(potenssiinkorotus)
-
-jakojäännösoperaatio = 23 % 5
-print(jakojäännösoperaatio)
-
-jakolasku= 20 / 5
-print(jakolasku)
-
-
-kokonaisosan_palauttava_jakolasku= 23 // 5
-print(kokonaisosan_palauttava_jakolasku)
-
-
 a=float(input("Anna eka numero: "))
 b=float(input("Anna toka numero: "))
 
@@ -130,6 +113,8 @@ print(f"Jalolasku: {jakolasku}")
 print(f"Potenssiinkorotus: {potenssiinkorotus}")
 print(f"Kokonaisosan palauttava jakolasku: {kokonaisosan_palauttava_jakolasku}")   # miks tuu 0.0
 print(f"Jakojäännösoperaatio: {jakojäännösoperaatio}")
+
+
 
 ### kotona chekatka float + int + str + input numerolla + siiten f kirjan +  {}
 

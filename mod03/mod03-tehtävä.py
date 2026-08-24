@@ -39,9 +39,18 @@ print(f"Numeroiden keskiarvo on: {keskiarvon:.2f}")
 
   #teht.5
 
+leiviskat = float(input("Anna leiviskät.\n"))
+naulat = float(input("Anna naulat.\n"))
+luodit = float(input("Anna luodit.\n"))
 
+yhteensa_luodit = (leiviskat * 20 * 32) + (naulat * 32) + luodit
+yhteensa_grammat = yhteensa_luodit * 13.3
 
+kilogrammat = int(yhteensa_grammat // 1000)
+grammat = yhteensa_grammat % 1000
 
+print("\nMassa nykymittojen mukaan:")
+print(f"{kilogrammat} kilogrammaa ja {grammat:.2f} grammaa.")
 
 
 
@@ -52,4 +61,9 @@ print(f"Numeroiden keskiarvo on: {keskiarvon:.2f}")
 random_num = random.randint(1, 100)
 random_num2 = random.randint(1, 100)
 print(f" {random_num} , {random_num2}")
+
+
+###tehtävä on muuta nää kaikki sun omalla tähtillä eli muodusta jokin uus
+ ### checkatka se M merki kansioiden perässä 
+  ### jakauta se kaikki kansiot git hubii siistesiksi
 
