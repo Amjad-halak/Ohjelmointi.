@@ -24,16 +24,7 @@ print(y)
 
 print("done 5")
 
-x = 212 * 5
-print(x)
-y = 12 ** 2
-print(y)
-z = 23 % 5
-print(z)
-a = 20 / 5
-c = 23 / 5
-print(a)
-print(c)
+
 
 g = 'amjad' + ' alhalak'
 print(g)
