@@ -37,7 +37,7 @@ print(f"Numeroiden yhteys on: {yhteylasku:.2f}")
 print(f"Numeroiden tulo on: {kertolasku:.2f}")
 print(f"Numeroiden keskiarvo on: {keskiarvon:.2f}")
 
-  #teht.5
+  #teht.5  (koitaka muodusta uuden tapa laskea leiviskät, naulat ja luodit grammoiksi)
 
 leiviskat = float(input("Anna leiviskät.\n"))
 naulat = float(input("Anna naulat.\n"))
@@ -45,16 +45,11 @@ luodit = float(input("Anna luodit.\n"))
 
 yhteensa_luodit = (leiviskat * 20 * 32) + (naulat * 32) + luodit
 yhteensa_grammat = yhteensa_luodit * 13.3
-
 kilogrammat = int(yhteensa_grammat // 1000)
 grammat = yhteensa_grammat % 1000
 
 print("\nMassa nykymittojen mukaan:")
 print(f"{kilogrammat} kilogrammaa ja {grammat:.2f} grammaa.")
-
-
-
-
 
     #teht.6
 

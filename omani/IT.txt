@@ -65,7 +65,7 @@ if x == "usa":
 elif x == "ero":
     print("the first floor start from (0)")
 else:
-    print("sorry u have to but if u are in (usa) or (ero)")
+    print("sorry u have to add if u are in (usa) or (ero) only")
 
 print("done 6")
 
