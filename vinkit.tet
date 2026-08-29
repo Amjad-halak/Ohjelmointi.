@@ -1,0 +1,41 @@
+PYTHON-MUISTIO
+==============
+
+LASKUTOIMITUKSET
+----------------
+
++   yhteenlasku                         الجمع
+-   vähennyslasku                       الطرح
+*   kertolasku                          الضرب
+/   jakolasku                           القسمة
+**  potenssiinkorotus                   الأس
+//  kokonaisosan palauttava jakolasku   قسمة بدون فاصلة
+%   jakojäännös                         باقي القسمة
+
+
+LUKUJEN JA TEKSTIN MUOTOILU
+---------------------------
+
+:.5f    liukuluku, 5 desimaalia         رقم عشري مع 5 أرقام
+:10.2f  2 desimaalia, leveys 10         رقم عشري بعرض 10 خانات
+:<20s   teksti, leveys 20, vasemmalle    نص بعرض 20 ومحاذاة لليسار
+:8d     kokonaisluku, leveys 8          عدد صحيح بعرض 8 خانات
+
+
+VERTAILUOPERAATTORIT
+--------------------
+
+>    suurempi kuin                      أكبر من
+<    pienempi kuin                      أصغر من
+>=   suurempi tai yhtä suuri kuin       أكبر من أو يساوي
+<=   pienempi tai yhtä suuri kuin       أصغر من أو يساوي
+==   yhtä suuri kuin                    يساوي
+!=   eri suuri kuin                     لا يساوي
+
+
+LOOGISET OPERAATTORIT
+---------------------
+
+and    و — يجب أن يكون الشرطان صحيحين
+or     أو — يكفي تحقق شرط واحد
+not    ليس — يعكس النتيجة
