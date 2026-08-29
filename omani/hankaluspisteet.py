@@ -18,6 +18,7 @@ grammat = yhteensa_grammat % 1000
 print("\nMassa nykymittojen mukaan:")
 print(f"{kilogrammat} kilogrammaa ja {grammat:.2f} grammaa.")
 
+
 ###tehtävä on muuta nää kaikki sun omalla tähtillä eli muodusta jokin uus
  ### checkatka se M merki kansioiden perässä 
   ### jakauta se kaikki kansiot git hubii siistesiksi

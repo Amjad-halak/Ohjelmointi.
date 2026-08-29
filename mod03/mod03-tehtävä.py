@@ -10,34 +10,40 @@ print(f"hello {x} !")
 # ympyrän pinta-ala ja ympärysmitta on laskettavissa kaavoilla:
 # ympyrän pinta-ala = π * r^2
 # ympärysmitta = 2 * π * r
-säde = float(input("Anna ympyrän säde: "))
-A = math.pi * säde ** 2
-print(f"Ympyrän pinta-ala on: {A:.2f}")
+#Kirjoita ohjelma, joka kysyy ympyrän säteen ja tulostaa sen pinta-alan.
+
+r=float(input("pista ympyrän säde tössä:  "))
+A=(math.pi*r**2)
+print(f"{A:.2f}")
 
 
  # (.2f) tarkoitus on anna 2 numeroa desimaalien jälkeen. ja f on tarkoitus on anna float luku.
 
   #teh.3
-a=float(input("Anna suorakulmion kannan: "))
-b=float(input("Anna suorakulmion korkeus: "))
-piirin_pituus = 2 * (a + b)
-pinta_ala = a * b
-print(f"Suorakulmion piirin pituus on: {piirin_pituus:.2f}")
-print(f"Suorakulmion pinta-ala on: {pinta_ala:.2f}")
+#Kirjoita ohjelma, joka kysyy suorakulmion kannan ja korkeuden. Ohjelma tulostaa suorakulmion piirin ja pinta-alan. Suorakulmion piiri tarkoittaa sen neljän sivun yhteispituutta.
+
+a=float(input("anna suorakulmion kannan: "))
+b=float(input("anna suorakulmion korkeus: "))
+piiri=2*(a+b)
+pinta_ala=a*b
+print(f"piiri on :  , {piiri:.2f} , pinta_ala on : , {pinta_ala:.2f}")
+
 
   #teh.4
 
-a=float(input("Anna eka numero: "))
-b=float(input("Anna toka numero: "))
+#Kirjoita ohjelma, joka kysyy kolme kokonaislukua. Ohjelma tulostaa lukujen summan, tulon ja keskiarvon.
 
-yhteylasku = a + b
-kertolasku = a * b
-keskiarvon = (a + b) / 2
-print(f"Numeroiden yhteys on: {yhteylasku:.2f}")
-print(f"Numeroiden tulo on: {kertolasku:.2f}")
-print(f"Numeroiden keskiarvo on: {keskiarvon:.2f}")
+x=int(input("enter any first number: "))
+y=int(input("enter any secound number: "))
+z=int(input("enter any therd number: "))
+
+u=(x+y+z)
+t=(x*y*z)
+l=(x+y+z)/3
+print(f"numbers summa on {u}\nnumbers tulo on {t}\nnumbers keskiarvo on {z}\n")   #وظيفه \n لحته تخلي تحت بعض مو بجانب بعض
 
   #teht.5  (koitaka muodusta uuden tapa laskea leiviskät, naulat ja luodit grammoiksi)
+  #Kirjoita ohjelma, joka kysyy käyttäjältä massan keskiaikaisten mittojen mukaan leivisköinä, nauloina ja luoteina. Ohjelma muuntaa syötteen täysiksi kilogrammoiksi ja grammoiksi sekä ilmoittaa tuloksen käyttäjälle. 
 
 leiviskat = float(input("Anna leiviskät.\n"))
 naulat = float(input("Anna naulat.\n"))
@@ -53,12 +59,17 @@ print(f"{kilogrammat} kilogrammaa ja {grammat:.2f} grammaa.")
 
     #teht.6
 
-random_num = random.randint(1, 100)
-random_num2 = random.randint(1, 100)
-print(f" {random_num} , {random_num2}")
+#Kirjoita ohjelma, joka arpoo ja tulostaa kaksi erilaista numerolukon koodia:
+#kolmenumeroisen koodin, jonka kukin numeromerkki on väliltä 0..9.
+#nelinumeroisen koodin, jonka kukin numeromerkki on väliltä 1..6.
 
+ran_1= random.randint(1, 100)
+ran_2= random.randint(-33 ,0)
+ran_3 = random.uniform(-3.2, 10.5)    # اذا بدك تستخدم فواصل => uniform
 
-###tehtävä on muuta nää kaikki sun omalla tähtillä eli muodusta jokin uus
- ### checkatka se M merki kansioiden perässä 
-  ### jakauta se kaikki kansiot git hubii siistesiksi
+print(f"{ran_3:.2f}")
+
+E=(f"{ran_1*ran_2*ran_3:.2f}")
+print(f"{E}")
+
 

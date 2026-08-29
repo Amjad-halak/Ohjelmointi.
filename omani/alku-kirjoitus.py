@@ -53,13 +53,8 @@ kokonaisluku = -9
 kokonailuku_pitlä = 12_456_123_180
 liukuluku = 4.973
 kompleksiluku = -4 + 2j
-
 totousluku = True
 totousluku2 = False
-
-print(kompleksiluku)
-print(kompleksiluku.real)
-print(kompleksiluku.imag)
 
 #printetaan muutujan tyypi (eli mikä on sen arvo)
 print(type(kokonaisluku))
