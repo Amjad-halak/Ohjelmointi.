@@ -77,6 +77,9 @@ if tunnus !="python" and salasana != "rules":
 else:
     print("Tervetuloa ")
 
+
+    # tehtävä 6
+
     
 
 

@@ -1,4 +1,8 @@
 #teht.5  (koitaka muodusta uuden tapa laskea leiviskät, naulat ja luodit grammoiksi)
+#Kirjoita ohjelma, joka kysyy käyttäjältä massan keskiaikaisten mittojen mukaan leivisköinä, nauloina ja luoteina. Ohjelma muuntaa syötteen täysiksi kilogrammoiksi ja grammoiksi sekä ilmoittaa tuloksen käyttäjälle.
+#Yksi leiviskä on 20 naulaa.
+#Yksi naula on 32 luotia.
+#Yksi luoti on 13,3 grammaa.
 
 leiviskät = float(input("Anna leiviskät.\n"))   #leiviksi-lkm
 naulat = float(input("Anna naulat.\n"))         #naulat-lkm
@@ -18,18 +22,7 @@ grammat = yhteensa_grammat % 1000
 print("\nMassa nykymittojen mukaan:")
 print(f"{kilogrammat} kilogrammaa ja {grammat:.2f} grammaa.")
 
-
-## chkatka kaikki (and,or,not) välikirjanokset ja miten ne toimi
-vuosiluku = int(input("Anna vuosiluku: "))
-
-if vuosiluku % 400 == 0 or (vuosiluku % 4 == 0 and vuosiluku % 100 != 0):
-    print("Vuosi on karkausvuosi.")
-else:
-    print("Vuosi ei ole karkausvuosi.")
-
-
-
-#########
+#==================
 #Kirjoita ohjelma, joka kysyy käyttäjältä lukuja siihen saakka,
 #kunnes tämä syöttää tyhjän merkkijonon lopetusmerkiksi. 
 #Lopuksi ohjelma tulostaa saaduista luvuista pienimmän ja suurimman.

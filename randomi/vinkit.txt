@@ -3,39 +3,79 @@ PYTHON-MUISTIO
 
 LASKUTOIMITUKSET
 ----------------
-
-+   yhteenlasku                         الجمع
--   vähennyslasku                       الطرح
-*   kertolasku                          الضرب
-/   jakolasku                           القسمة
-**  potenssiinkorotus                   الأس
-//  kokonaisosan palauttava jakolasku   قسمة بدون فاصلة
-%   jakojäännös                         باقي القسمة
++    yhteenlasku                         الجمع
+-    vähennyslasku                       الطرح
+*    kertolasku                          الضرب
+/    jakolasku                           القسمة
+**   potenssiinkorotus                   الأس
+//   kokonaisosan palauttava jakolasku   قسمة بدون فاصلة (قسمة صحيحة)
+%    jakojäännös                         باقي القسمة
 
 
 LUKUJEN JA TEKSTIN MUOTOILU
 ---------------------------
-
-:.5f    liukuluku, 5 desimaalia         رقم عشري مع 5 أرقام
-:10.2f  2 desimaalia, leveys 10         رقم عشري بعرض 10 خانات
+:.5f    liukuluku, 5 desimaalia          رقم عشري مع 5 أرقام بعد الفاصلة
+:10.2f  2 desimaalia, leveys 10          رقم عشري بعرض 10 خانات
 :<20s   teksti, leveys 20, vasemmalle    نص بعرض 20 ومحاذاة لليسار
-:8d     kokonaisluku, leveys 8          عدد صحيح بعرض 8 خانات
+:8d     kokonaisluku, leveys 8           عدد صحيح بعرض 8 خانات
 
 
 VERTAILUOPERAATTORIT
 --------------------
-
->    suurempi kuin                      أكبر من
-<    pienempi kuin                      أصغر من
->=   suurempi tai yhtä suuri kuin       أكبر من أو يساوي
-<=   pienempi tai yhtä suuri kuin       أصغر من أو يساوي
-==   yhtä suuri kuin                    يساوي
-!=   eri suuri kuin                     لا يساوي
+>    suurempi kuin                       أكبر من
+<    pienempi kuin                       أصغر من
+>=   suurempi tai yhtä suuri kuin        أكبر من أو يساوي
+<=   pienempi tai yhtä suuri kuin        أصغر من أو يساوي
+==   yhtä suuri kuin                     يساوي
+!=   eri suuri kuin                      لا يساوي
 
 
 LOOGISET OPERAATTORIT
 ---------------------
+and  و — يجب أن يكون الشرطان صحيحين
+or   أو — يكفي تحقق شرط واحد
+not  ليس — يعكس النتيجة (تحويل الصح لخطأ والعكس)
 
-and    و — يجب أن يكون الشرطان صحيحين
-or     أو — يكفي تحقق شرط واحد
-not    ليس — يعكس النتيجة
+
+TOISTORAKENTEET JA OHJAUS (WHILE / FOR / BREAK)
+-----------------------------------------------
+while True       ikuisen silmukan aloitus      بدء حلقة تكرار غير محدودة (لأجل غير مسمى)
+break            keskeyttää silmukan           إيقاف الحلقة والخروج منها فوراً
+continue         hyppää seuraavaan kierrokseen التجاوز للبدء في الدورة التالية فوراً دون إكمال الأسطر
+range(a, b)      lukusarja a:sta b-1:een       إنشاء سلسلة أرقام تبدأ من a وتنتهي قبل b
+
+
+FUNKTIOT LUVUILLE JA LISTOILLE (MIN / MAX / LEN)
+------------------------------------------------
+min()   palauttaa pienimmän arvon              إيجاد أصغر قيمة في قائمة أو بين أرقام
+max()   palauttaa suurimman arvon              إيجاد أكبر قيمة في قائمة أو بين أرقام
+len()   palauttaa pituuden / määrän            معرفة عدد العناصر في القائمة أو طول النص
+sum()   laskee alkioiden summan                جمع كافة الأرقام الموجودة في القائمة
+
+
+LISTAOPERAATIOT (LIST METHODS)
+------------------------------
+append()  lisää alkion loppuun               إضافة عنصر جديد في نهاية القائمة
+          nimet.append("Matti")
+
+remove()  poistaa alkion                     حذف أول عنصر يطابق الاسم المحدد
+          nimet.remove("Pekka")
+
+insert()  lisää tiettyyn kohtaan             إضافة عنصر في موقع (index) محدد
+          nimet.insert(4, "Teppo")
+
+extend()  yhdistää toisen listan             دمج قائمة أخرى مع القائمة الحالية
+          toiset = ["Allu", "Ninni"]
+          nimet.extend(toiset)
+
+index()   palauttaa alkion indeksin          معرفة رقم موقع (index) عنصر معين
+          monesko = nimet.index("Olga")
+
+in        tarkistaa onko alkiota             التحقق مما إذا كان العنصر موجوداً داخل القائمة
+          if "Matti" in nimet:
+
+sort()    järjestää listan                   ترتيب عناصر القائمة تصاعدياً (من الأصغر للأكبر)
+          luvut.sort()
+
+reverse() kääntää listan järjestyksen        عكس ترتيب عناصر القائمة بالعكس
+          luvut.reverse()
