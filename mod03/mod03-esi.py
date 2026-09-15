@@ -3,7 +3,7 @@ import math
 # ==========================================
 # Esimerkki 0: Merkkijonojen yhdistäminen (String concatenation)
 # ==========================================
-# Luetaan kaksi lukua käyttäjältä ja muunnetaan ne desimaaliluvuksi (float)
+# دمج النصوص والأرقام بالطريقة القديمة باستخدام str()
 luku1 = float(input("Anna 1. luku: "))
 luku2 = float(input("Anna 2. luku: "))
 
@@ -16,6 +16,7 @@ print("Lukujen " + str(luku1) + " ja " + str(luku2) + " summa on " + str(summa) 
 # ==========================================
 # Esimerkki 1: f-string muotoilu (Uusi ja parempi tapa)
 # ==========================================
+# التنسيق الحديث والسهل للنصوص باستخدام f-strings والأقواس {}
 ika = 22
 uusi_kayttaja = input("Anna nimesi: ")
 
@@ -26,40 +27,42 @@ print(f"Hauska tavata {uusi_kayttaja} ja ikäni on {ika}!!!!!")
 # ==========================================
 # Esimerkki 2: Muuttujatyypit (Data types)
 # ==========================================
+# أنواع البيانات الأساسية في بايثون وفحص نوع المتغير
 pisteet = 200
-pisteet = 400  # Muuttujan arvo voidaan ylikirjoittaa
+pisteet = 400  # Muuttujan arvo voidaan ylikirjoittaa (إعادة كتابة قيمة المتغير)
 
-merkkijono = "Ulla"  # Merkkijono (str)
-kokonaisluku = -9  # Kokonaisluku (int)
-kokonaisluku_pitka = 12_456_123_180  # Alaviivaa voidaan käyttää tuhansien erottimena
-liukuluku = 4.973  # Desimaaliluku / Liukuluku (float)
-kompleksiluku = -4 + 2j  # Kompleksiluku (complex)
-totuusarvo = False  # Totuusarvo / Buleani (bool)
+merkkijono = "Ulla"  # Merkkijono (str - نص)
+kokonaisluku = -9  # Kokonaisluku (int - عدد صحيح)
+kokonaisluku_pitka = 12_456_123_180  # Alaviivaa voidaan käyttää tuhansien erottimena (استخدام _ للفصل)
+liukuluku = 4.973  # Desimaaliluku / Liukuluku (float - عدد عشري)
+kompleksiluku = -4 + 2j  # Kompleksiluku (complex - عدد مركب)
+totuusarvo = False  # Totuusarvo / Buleani (bool - قيمة منطقية)
 
-# Kompleksiluvun reaaliosa ja kuvitteellinen osa
+# Kompleksiluvun reaaliosa ja kuvitteellinen osa (استخراج الجزء الحقيقي والخيالي)
 print(f"Reaali-osa: {kompleksiluku.real}")
 print(f"Kuvitteellinen osa: {kompleksiluku.imag}")
 
-# type()-funktio kertoo muuttujan tyypin
+# type()-funktio kertoo muuttujan tyypin (فحص نوع المتغير)
 print(f"Muuttujan tyyppi voidaan tutkia: {type(kompleksiluku)}")
 
 
 # ==========================================
 # Esimerkki 3: Tulostuksen muotoilu ja tasaus (Formatting)
 # ==========================================
-# <20s tarkoittaa: varaa 20 merkkiä tilaa ja tasaa vasemmalle
+# المحاذاة وتنسيق عدد الأرقام العشرية
+# <20s tarkoittaa: varaa 20 merkkiä tilaa ja tasaa vasemmalle (حجز 20 خانة ومحاذاة للليسار)
 print(f"Merkkijono: {merkkijono:<20s} sijoitetaan tähän väliin")
 
 print(f"{'Vakio':6s}| {'Arvo':6s}")
 print("-------------")
-# :<6.2f tarkoittaa: desimaaliluku, 2 desimaalin tarkkuus, tasaus vasemmalle
+# :<6.2f tarkoittaa: desimaaliluku, 2 desimaalin tarkkuus, tasaus vasemmalle (ركمان بعد الفاصلة)
 print(f"{'Pii':6s}: {math.pi:<6.2f}")
 
 
 # ==========================================
 # Esimerkki 4: Laskukone ja peruslaskutoimitukset (Calculator)
 # ==========================================
-# Moneen riviin ulottuva merkkijono kolmella heittomerkillä '''
+# جميع العمليات الحسابية الأساسية والمتقدمة
 tuloste = """
     yhteenlasku (+)
     vähennyslasku (-)
@@ -71,18 +74,18 @@ tuloste = """
 """
 print(tuloste)
 
-# Luetaan käyttäjältä kaksi lukua
+# Luetaan käyttäjältä kaksi lukua (إدخال الأرقام)
 a = float(input("Anna ensimmäinen luku:\n"))
 b = float(input("Anna toinen luku:\n"))
 
-# Laskutoimitukset:
+# Laskutoimitukset (إجراء الحسابات):
 yhteenlasku = a + b
 vahennyslasku = a - b
 kertolasku = a * b
 jakolasku = a / b
-jakojaannos = a % b  # Jakojäännös (Modulus)
-kokonaisosa = a // b  # Kokonaisosa (Floor division)
-potenssiinkorotus = a**b  # Potenssi (Power, esim 2^3)
+jakojaannos = a % b  # Jakojäännös (Modulus - باقي القسمة)
+kokonaisosa = a // b  # Kokonaisosa (Floor division - القسمة الصحيحة)
+potenssiinkorotus = a**b  # Potenssi (Power - الأس)
 
 print(f"Yhteenlasku: {yhteenlasku}")
 print(f"Vähennyslasku: {vahennyslasku}")

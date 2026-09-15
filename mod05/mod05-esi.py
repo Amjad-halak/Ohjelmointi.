@@ -4,13 +4,13 @@ import math
 # ==========================================
 # Esimerkki 0: Numeroiden kasvattaminen (Laskuri / Counter)
 # ==========================================
-# Asetetaan alustusarvo (muuttuja)
+# Asetetaan alustusarvo (عداد بشروط عشرية)
 x = 1.5
 
 # Silmukka pyörii niin kauan kuin x on pienempi tai yhtä suuri kuin 10.0
 while x <= 10.00:
     print(f"{x:.2f} on allempi kun merki numero")
-    # Kasvatetaan x:n arvoa joka kierroksella (muuten tulee ikuinen silmukka)
+    # Kasvatetaan x:n arvoa joka kierroksella (زيادة القيمة لتفادي الحلقة المفتوحة)
     x = x + 1.3
 
 print("done")
@@ -19,12 +19,13 @@ print("done")
 # ==========================================
 # Esimerkki 1: Tyhjän syötteen tarkistus (Validation)
 # ==========================================
+# التحقق من عدم ترك خانة الاسم فارغة
 name = input("pista sun nimisi:: ")
 
-# Silmukka toistuu VAIN jos käyttäjä painaa Enter antamatta nimeä (tyhjä merkkijono "")
+# Silmukka toistuu VAIN jos käyttäjä painaa Enter antamatta nimeä
 while name == "":
     print("et laitanut sun nimi!!")
-    # Kysytään nimeä uudelleen, jotta päästään pois silmukasta
+    # Kysytään nimeä uudelleen
     name = input("pista sun nimisi:: ")
 
 x = f"hei mr {name}"
@@ -34,6 +35,7 @@ print(x)
 # ==========================================
 # Esimerkki 2: Virheellisen arvon estäminen (Virheellinen ikä)
 # ==========================================
+# رفض الأرقام السالبة للأعمار
 ikä = float(input("mikä sun oikei ikä on ?? "))
 
 # Silmukka jatkuu niin kauan kuin ikä on negatiivinen (alle 0)
@@ -49,6 +51,7 @@ print(y)
 # ==========================================
 # Esimerkki 3: Lopetusmerkin käyttö ("q" lopettaa)
 # ==========================================
+# الاستمرار في طلب الإدخال حتى كتابة حرف الخروج q
 ruoka = input("anna sun lempisi ruoka ? (paina q lopetamaan) :: ")
 
 # "not ruoka == 'q'" tarkoittaa: niin kauan kuin syöte EI OLE "q"
@@ -63,6 +66,7 @@ print("bey")
 # ==========================================
 # Esimerkki 4: Numero tietyltä väliltä (Rajojen tarkistus)
 # ==========================================
+# فحص المجال والتأكد من اختيار رقم بين 1 و 10
 numero = int(input("anna nuomerosi 1 - 10 väli :"))
 
 # Silmukka toistuu jos numero on pienempi kuin 1 TAI suurempi kuin 10
@@ -77,6 +81,7 @@ print(f"sun valitus nuomero on {numero} ! ")
 # ==========================================
 # Esimerkki 5: Toistokertojen määrä (Käyttäjän määräämä laskuri)
 # ==========================================
+# حلقة تكرار ديناميكية حسب الرقم الذي يحدده المستخدم
 times = float(input("enter how many welcomes time:: "))
 done = 0
 
@@ -90,6 +95,7 @@ while done <= times:
 # ==========================================
 # Esimerkki 6: Monen lopetuskomennon tarkistus (not ja or -rakenne)
 # ==========================================
+# الخروج باستخدام أكثر من كلمة إيقاف مختلفة
 komento = input("anna komento ")
 
 # Silmukka toistuu niin kauan kuin komento EI OLE "lopeta", "stop" EIKÄ tyhjä ""
@@ -104,6 +110,7 @@ print("toiminnon päätty")
 # ==========================================
 # Esimerkki 7: Satunnaislukujen simulointi (Nopanheitto)
 # ==========================================
+# محاكاة رمي حجر النرد حتى التوقف عند رقمين متشابهين (6 و 6)
 noppa1 = noppa2 = heittojen_maara = 0
 
 # Silmukka pyörii niin kauan kuin MOLEMMAT nopat EIVÄT OLE kutosia (6 ja 6)
@@ -119,6 +126,7 @@ print(f"Tarvittiin {heittojen_maara} heittoa, että saatiin molemmat nopat (6)."
 # ==========================================
 # Esimerkki 8: Sisäkkäiset silmukat (Kertotaulu / Nested loops)
 # ==========================================
+# الحلقات المتداخلة لطباعة جدول الضرب الكامل
 ensimainen = 1
 
 # Ulkopuolinen silmukka hallitsee ensimmäistä numeroa (1-10)
@@ -134,11 +142,10 @@ while ensimainen <= 10:
 print("tähän päätyy")
 
 
-
 # ==========================================
-# 9. Laskurien oikotiet (+= ja -=)
+# Esimerkki 9: Laskurien oikotiet (+= ja -=)
 # ==========================================
-# += lisää arvon, -= vähentää arvon
+# اختصارات العدادات
 luku = 0
 luku += 1  # Sama kuin: luku = luku + 1
 luku += 1  # Luku on nyt 2
@@ -147,9 +154,9 @@ print(f"Laskurin arvo: {luku}")
 
 
 # ==========================================
-# 10. Taaksepäin laskeminen (10 -> 1)
+# Esimerkki 10: Taaksepäin laskeminen (Countdown 10 -> 1)
 # ==========================================
-# Tulostetaan luku ENNEN vähennystä, jotta laskenta alkaa kympistä
+# العد التنازلي مع تنقيص العداد
 laskuri = 10
 
 print("\n--- Lasketaan alaspäin ---")
@@ -159,8 +166,9 @@ while laskuri > 0:
 
 
 # ==========================================
-# 11. Käyttäjänimen kysyminen ja yrityskerrat
+# Esimerkki 11: Käyttäjänimen kysyminen ja yrityskerrat
 # ==========================================
+# تحديد عدد المحاولات بـ 5 محاولات فقط مع الخروج بـ break
 nimi = input("\nEnter your name: ").strip()
 yritykset = 0
 
@@ -181,11 +189,9 @@ else:
 
 
 # ==========================================
-# 12. Tekstin puhdistus (.strip() ja .lower()) sekä break & while/else
+# Esimerkki 12: Tekstin puhdistus ja while/else -rakenne
 # ==========================================
-# .strip() poistaa ylimääräiset välilyönnit
-# .lower() muuttaa kirjaimet pieniksi (esim. "LOPETA" -> "lopeta")
-
+# تنظيف الإدخال بـ .strip() و .lower() مع استخدام شرط else الخاص بالحلقة
 komento = input("\nAnna komento (pelaa / apua / lopeta): ").strip().lower()
 
 while komento != "lopeta":

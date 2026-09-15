@@ -3,6 +3,7 @@ import random
 # ==========================================
 # Esimerkki 0: Bulean-arvo (Boolean: True / False)
 # ==========================================
+# المتغيرات المنطقية (True أو False)
 onko_totta = False
 
 # Jos onko_totta on True, koodi suoritetaan. Jos False, hypätään yli.
@@ -13,7 +14,7 @@ if onko_totta:
 # ==========================================
 # Esimerkki 1: Kolikonheitto (Satunnaisluku randint 0 tai 1)
 # ==========================================
-# Arvotaan kokonaisluku: 0 tai 1
+# محاكاة رمي العملة بأرقام صحيحة عشوائية (0 أو 1)
 random_number = random.randint(0, 1)
 print(f"Arvottu numero: {random_number}")
 
@@ -30,22 +31,23 @@ print(f"Heitit kolikkoa ja sait {result}n.")
 # ==========================================
 # Esimerkki 2: Kolikonheitto 2.0 (Liukuluku random.random & if-elif-else)
 # ==========================================
-# random.random() antaa desimaaliluvun väliltä 0.0 - 1.0
+# رمي العملة باستخدام الأعداد العشرية العشوائية واحتمالات متعددة
 random_number = random.random()
 print(f"Desimaaliluku: {random_number:.4f}")
 
 # Tarkistetaan todennäköisyydet järjestyksessä
 if random_number < 0.01:
-    print("Kolikko jäi pystyyn")  # 1% mahdollisuus
+    print("Kolikko jäi pystyyn")  # 1% mahdollisuus (احتمال 1%)
 elif random_number < 0.505:
-    print("Kruuna tuli.")  # Noin 49.5% mahdollisuus
+    print("Kruuna tuli.")  # Noin 49.5% mahdollisuus (احتمال 49.5%)
 else:
-    print("Klaava tuli")  # Loput mahdollisuudet
+    print("Klaava tuli")  # Loput mahdollisuudet (باقي الاحتمالات)
 
 
 # ==========================================
 # Esimerkki 3: Numerovälin tarkistus ja ehdot (Vertailut)
 # ==========================================
+# فحص المجال والمقارنات المباشرة
 arvo = 150
 # Tarkistetaan onko arvo välillä 90-110 (Antaa False)
 print(90 < arvo < 110)
@@ -56,6 +58,7 @@ print(100 != 101)
 # ==========================================
 # Esimerkki 4: Lääke-esimerkki (Sisäkkäiset ehdot & and/or)
 # ==========================================
+# الشروط المركبة والمعقدة لحساب جرعة الدواء
 ikä = int(input("Anna ikä: "))
 
 # Kysytään painoa VAIN jos ikä on välillä 15-17
@@ -70,7 +73,7 @@ if ikä >= 18 or (ikä >= 15 and paino >= 55):
 # ==========================================
 # Esimerkki 5: Satunnainen desimaaliluku (random.uniform)
 # ==========================================
-# random.uniform arpoo desimaaliluvun tietyltä väliltä
+# توليد أرقام عشرية عشوائية في مجال محدد
 random_number_2 = random.uniform(-1.02, 1.34)
 print(f"Satunnainen desimaali: {random_number_2:.2f}")
 
@@ -85,6 +88,7 @@ print(f"Tulos on: {result1}")
 # ==========================================
 # Esimerkki 6: Ajokorttitarkistus (Sisäkkäinen if-lause)
 # ==========================================
+# الشروط المتداخلة (Nested IF) للتحقق من العمر والطول لرخصة القيادة
 ikä = int(input("Mikä sun ikäsi on? "))
 
 if ikä >= 18:
@@ -103,8 +107,8 @@ print(f"Sun oikei tulos on: {x}\nReach us on our platform")
 # ==========================================
 # Esimerkki 7: Looginen AND ja .upper() -metodi
 # ==========================================
+# المعامل المنطقي AND مع تحويل الحروف لكبيرة .upper()
 temp = float(input("enter your region temp now:: "))
-# .upper() muuttaa syötteen aina isoksi kirjaimeksi ("y" -> "Y")
 sunny = input("is it sunny outside (Y/N): ").upper()
 
 # Molempien ehtojen pitää olla True (Lämpötila > 15 JA sunny == "Y")
@@ -119,6 +123,7 @@ print(f"The temp situation is: {x}")
 # ==========================================
 # Esimerkki 8: Looginen OR (Jompaakumpaa ehtoa riittää)
 # ==========================================
+# المعامل المنطقي OR (يكفي تحقق أحد الشرطين)
 temp = float(input("enter your region temp now:: "))
 
 # Ehto toteutuu jos lämpötila on 0 tai alle TAI 30 tai yli
@@ -133,6 +138,7 @@ print(f"The temp situation is: {x}")
 # ==========================================
 # Esimerkki 9: Bulean-muuttujan käyttö ehtolauseessa
 # ==========================================
+# استخدام متغير منطقي Boolean مباشر داخل شرط if
 sunny = True
 
 # Jos sunny on True, suoritetaan ensimmäinen lohko

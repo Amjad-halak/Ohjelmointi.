@@ -79,3 +79,32 @@ sort()    järjestää listan                   ترتيب عناصر القائ
 
 reverse() kääntää listan järjestyksen        عكس ترتيب عناصر القائمة بالعكس
           luvut.reverse()
+
+
+
+
+الثلاجة هي الدالة (Funktio) التي تُنفذ وظيفة التبريد، والأشياء التي تضعها بداخلها هي المعاملات (Parameters) التي تتأثر بعمل الثلاجة.
+
+FUNKTIOT JA SYÖTTEET (FUNKTIO / PARAMETRI / RETURN)
+--------------------------------------------------
+def       määrittää uuden funktion             تعريف دالة جديدة (مثل إنشاء ثلاجة جديدة)
+          def jäähdytä(juoma):
+
+parametri syöte / muuttuja suluissa            المتغير المنظر القيمة داخل الأقواس (أشياء تضعها بالثلاجة)
+          def tervehdi(nimi):
+
+argumentti todellinen arvo kutsussa            القيمة الحقيقية الممررة عند التشغيل (مثل علبة العصير)
+          tervehdi("Ahmad")
+
+return    palauttaa tuloksen pääohjelmaan      إرجاع النتيجة للبرنامج الخارجي (إخراج الشيء مثلجاً)
+          return kylmä_juoma
+
+None      tyhjä paluu / ei return-sanaa        قيمة خالية (ترجع إذا لم نستخدم return)
+          tulos = None
+
+pass      tyhjä komento (varaa paikan)         أمر فارغ لحجز المكان مؤقتاً بدون أخطاء
+          def tuleva_toiminto():
+              pass
+
+*args     vaihteleva määrä parametreja        استقبال عدد غير محدد من المعاملات (كتجميعها في قائمة)
+          def summa(*luvut):

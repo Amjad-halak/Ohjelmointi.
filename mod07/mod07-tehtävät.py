@@ -6,5 +6,9 @@ import random
 def noppa ():
     return random.randint(1,6)
 
-noppa()
-print("amjad")
+tulos=0
+while noppa != 6 :
+    tulos=noppa()
+print(tulos)
+    
+
