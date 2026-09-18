@@ -269,3 +269,5 @@ hello_lambda = lambda name: f"hello {name}"
 
 print(say_hello_normal("ahmad"))
 print(hello_lambda("amjad"))
+
+

@@ -4,9 +4,9 @@ import random
 # Esimerkki 1: For-silmukan perusteet & range()
 # ==========================================
 # 1. Suora läpikäynti listan läpi (مرور مباشر على عناصر القائمة)
-num = [1, 10, 55]
-for amjad in num:
-    print(amjad)
+numbers = [1, 10, 55]
+for num in numbers:
+    print(num)
 
 # 2. range(55) alkaa 0:sta ja päättyy 54:ään (يبدأ من 0 وينتهي عند 54)
 for amjad in range(55):

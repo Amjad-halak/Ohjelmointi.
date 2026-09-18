@@ -1,2 +1,0 @@
-###
-# chekatava asioita 
