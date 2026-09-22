@@ -1,151 +1,225 @@
-# THE OOP  == (طريقه لكتابه الكود)
-# عام موجود بعده لغات في البرمجه 
-# the class in general 
-# __init__ (تهيء الداتا للشي الي بدك تعمله )
-
-# in funktion u can leave the parameter empty but not here in class and init ==> mean 
-#def member ()
-#class Name :
-    #def __init__(self , Other_data) :   {it gonna show eror if u leave parameter without SELF and continue normal }
-
+# ==========================================
+# MODUULI 1: OLIO-OHJELMOINNIN PERUSTEET (OOP)
+# ==========================================
+# 💡 مفهوم عام لأمجد المستقبلي:
+# - الكلاس (Class) هو "المخطط/الفيلا على الورق" (Blueprint).
+# - الأوبجكت (Olio / Object) هو "البيت الحقيقي المبني" في الذاكرة.
+# - الدالة __init__ هي "المنشئ/التهيئة" (Constructor) لتجهيز البيانات عند بناء الأوبجكت.
+# - كلمة self ضرورية جداً داخل الكلاس، وتعني "هذا الأوبجكت المحدّد حالياً".
 
 
-class member : 
+# ==========================================
+# Esimerkki 0: أسهل مثال ممكن (Perusluokka)
+# ==========================================
+# كلاس بسيط جداً يحتوي على متغيرات فقط لطلب وبناء أوبجكت أساسي
+class Koira:
+    def __init__(self, nimi, ika):
+        self.nimi = nimi
+        self.ika = ika
 
-    def __init__(self , first_name , middle_name , last_name ,gender) :
-
-        self.fname=first_name   
-
-        self.mname=middle_name
-
-        self.lname=last_name
-
-        self.gender=gender
+# إنشاء أوبجكت وطباعة البيانات مباشرة
+koira1 = Koira("Rekku", 3)
+print(f"Koiran nimi: {koira1.nimi}, ikä: {koira1.ika}")
 
 
+# ==========================================
+# Esimerkki 1: إضافة دالة بسيطة داخل الكلاس (Simple Method)
+# ==========================================
+# إضافة دالة pelia لتشغيل سلوك معين للأوبجكت
+class Pelihahmo:
+    def __init__(self, nimi):
+        self.nimi = nimi
+
+    def pelaa(self):
+        print(f"Pelihahmo {self.nimi} pelaa nyt!")
+
+hahmo1 = Pelihahmo("Doom")
+hahmo1.pelaa()
+
+
+# ==========================================
+# Esimerkki 2: تعديل بيانات الأوبجكت عبر دالة (Modifying Attributes)
+# ==========================================
+# دالة double_speed تقوم بمضاعفة السرعة داخل الأوبجكت
+class Character:
+    def __init__(self, health, damage, speed):
+        self.health = health
+        self.damage = damage
+        self.speed = speed
+
+    def double_speed(self):
+        self.speed *= 2
+
+warrior = Character(100, 50, 10)
+ninja = Character(80, 40, 60)
+
+print(f"Warrior speed: {warrior.speed}")
+print(f"Ninja speed: {ninja.speed}")
+
+warrior.double_speed()
+print(f"Warrior new speed: {warrior.speed}")
+
+ninja.double_speed()
+print(f"Ninja new speed: {ninja.speed}")
+
+
+# ==========================================
+# Esimerkki 3: منطق واتخاذ قرار داخل الدالة (Method with Logic)
+# ==========================================
+# دالة tall تتأكد من طول القطة وترجع نصاً بناءً على الشرط
+class Cat:
+    def __init__(self, name, ikä, tyyppi, pituus):
+        self.name = name
+        self.ikä = ikä
+        self.tyyppi = tyyppi
+        self.pituus = pituus
+
+    def tall(self):
+        if self.pituus > 60:
+            return "kissasi on aikuinen"
+        else:
+            return "kissasi on pikku nuori"
+
+cat1 = Cat("shbshb", 2, "domestic shorthair", 50)
+cat2 = Cat("satoor", 5, "laperm", 100)
+
+print(f"{cat1.name}: {cat1.tall()}")
+print(f"{cat2.name} (pituus {cat2.pituus} cm, rotu {cat2.tyyppi}): {cat2.tall()}")
+
+
+# ==========================================
+# Esimerkki 4: استدعاء دالة داخل دالة أخرى بالـ Class (Member)
+# ==========================================
+# دالة name_with_title تستدعي دالة full_name بداخلها باستخدام self
+class Member:
+    not_allowed_names = ["hell", "fucker", "shbshb", "shit"]
+    users_num=0
+    def __init__(self, first_name, middle_name, last_name, gender):
+        self.fname = first_name   
+        self.mname = middle_name
+        self.lname = last_name
+        self.gender = gender
+
+        Member.users_num += 1 
     def full_name(self):
+        # نضع جميع الأسماء في tuple ونفحص إذا كان أي منها موجوداً في قائمة الممنوعات
+        names = (self.fname, self.mname, self.lname)
+        if any(name in Member.not_allowed_names for name in names):
+            raise ValueError("Name not allowed!")
+
         return f"{self.fname} {self.mname} {self.lname}"
 
-    def name_with_title (self) :
-        if self.gender == "women" or self.gender == "nainen ":
+    def name_with_title(self):
+        gender_clean = self.gender.strip().lower()
+        if gender_clean in ["women", "nainen"]:
             return f"MS : {self.full_name()}"
-        elif self.gender == "man" or self.gender == "mies ":
+        elif gender_clean in ["man", "mies"]:
             return f"MR: {self.full_name()}"
         else:
-             return f"{self.full_name()}"
-
-    
-
-member_one = member("amjad","mohamad ","alhalak" , "man")
-member_Two = member("rama" ,  "mohamad" , "halak" , "women")
-member_Three = member("maisa" ,  "ghaza" , "fajer" , "-")
+            return f"{self.full_name()}"
 
 
-print(member_one.fname,member_one.mname,member_one.lname)
-print(member_Two.mname)
-print(member_Two.name_with_title())
+    def Delete_users(self):
+        Member.users_num -= 1 
+
+        return f"user {self.fname} Deleted"
+
+print(f"users count befour {Member.users_num}")
+
+# المخرجات التجريبية
+member_one = Member("amjad", "mohamad", "alhalak", "man")
+member_two = Member("rama", "mohamad", "halak", "women")
+member_three = Member("maisa", "ghaza", "fajer", "-")
+
 print(member_one.name_with_title())
-print(member_Three.name_with_title())
+print(member_two.name_with_title())
+print(member_three.name_with_title())
 
 
-
-#=============================
-class ikäisyys :
-    def __init__ (self , year , ):
-        self.year=year
-        self.month=year * 12 
-        self.days=year * 365
-year0=int(input("how old are u ?: "))
-amjad=ikäisyys(year0)
-typi = input("in which way want your old be (year / month / days ) : ")
-if typi == "year":
-    print(amjad.year)
-elif typi == "month":
-    print(amjad.month)
-elif typi == "days":
-    print(amjad.days)
+print(member_one.Delete_users())
+# تجربة Catching للخطأ بالشكل الصحيح
+try:
+    member_four = Member("hell", "shit", "fera", "-")
+    print(member_four.full_name())
+except ValueError as e:
+    print(f"Virhe: {e}")
 
 
+print(f"users count after {Member.users_num}")
+
+# ==========================================
+# Esimerkki 5: الربط بين مدخلات المستخدم والأوبجكت (User Input)
+# ==========================================
+# حساب العمر بأشكال مختلفة بناءً على سنة الإدخال
+class Ikaisuus:
+    def __init__(self, year):
+        self.year = year
+        self.month = year * 12 
+        self.days = year * 365
+
+year0 = int(input("How old are you?: "))
+amjad = Ikaisuus(year0)
+
+tyyppi = input("In which way do you want your age (year / month / days): ").strip().lower()
+if tyyppi == "year":
+    print(f"Age in years: {amjad.year}")
+elif tyyppi == "month":
+    print(f"Age in months: {amjad.month}")
+elif tyyppi == "days":
+    print(f"Age in days: {amjad.days}")
 
 
-  
-class cat :
-    def __init__(self , name , ikä , tyypi , pituus):
-        self.name=name
-        self.ikä=ikä
-        self.tyypi=tyypi
-        self.pituus=pituus
-    def tall (self):
-        if self.pituus > 60 :
-            return f" kissasi on aikuinen"
-        else:
-            return f"kissasi on pikku nuori "
-    
-cat1=cat("shbshb" , 2 , "domaestic shrthair" , 50 )
-cat2=cat("satoor" , 5 , "laperm" , 100 )
+# ==========================================
+# Esimerkki 6: المتغيرات الثابتة والقيم الافتراضية (Class Variables & Default Args)
+# ==========================================
+# استخدام العداد tehty وقيمة افتراضية للصوت aani="RROOAAARR!"
+class Lion:
+    tehty = 0  # Static / Class variable (مشترك بين كل الأسود)
 
-
-print(cat1.name)
-print(f"{cat2.pituus} ja sen tyypi {cat2.tyypi} and {cat2.tall()}")        
-
-
-
-
-
-class lion:
-
-    tehty = 0
-    def __init__(self, tyypi, hiuksenpituus, paino, aani="RROOAAARR!"):
-        self.tyypi = tyypi
+    def __init__(self, tyyppi, hiuksenpituus, paino, aani="RROOAAARR!"):
+        self.tyyppi = tyyppi
         self.hiuksenpituus = hiuksenpituus
         self.paino = paino
         self.aani = aani
 
-        lion.tehty += 1
+        Lion.tehty += 1  # زيادة العداد عند إنشاء كل أوبجكت جديد
+
+lion1 = Lion("Afrikanleijona", "Pitkä ja tuuhea harja", 190)
+lion2 = Lion("Aasianleijona", "Lyhyt harja", 160, "RRAARR!")
+lion3 = Lion("Berberileijona", "Erittäin pitkä tumma harja", 230, "GROOOAAARRR!")
+
+print(f"Oletusääni (lion1): {lion1.aani}")
+print(f"Lion1: {lion1.tyyppi}, {lion1.hiuksenpituus}, {lion1.paino} kg, ääni: {lion1.aani}")
+print(f"Lion2: {lion2.tyyppi}, {lion2.hiuksenpituus}, {lion2.paino} kg, ääni: {lion2.aani}")
+print(f"Leijonia luotu yhteensä: {Lion.tehty}")
 
 
-lion1 = lion("Afrikanleijona", "Pitkä ja tuuhea harja", 190)
-lion2 = lion("Aasianleijona", "Lyhyt harja", 160, "RRAARR!")
-lion3 = lion("Berberileijona", "Erittäin pitkä tumma harja", 230, "GROOOAAARRR!")
+# ==========================================
+# Esimerkki 7: مراجع الأوبجكت في الذاكرة (Memory References & Garbage Collector)
+# ==========================================
+# فهم كيف تشير المتغيرات لنفس العنوان في الذاكرة وكيف يحذف البايثون الكائنات غير المستخدمة
+class KoiraTarkastus:
+    def __init__(self, nimi, syntymavuosi):
+        self.nimi = nimi
+        self.syntymavuosi = syntymavuosi
 
-# التعديل هنا: استخدام النص المصحح والوصول للقيمة الافتراضية عبر lion1.aani
-print(f"If the aani parameter is not written (like in lion1), Python will default to writing: {lion1.aani}")
+k1 = KoiraTarkastus("Muro", 2018)
+k2 = KoiraTarkastus("Rekku", 2022)
 
-print(f"lion1 kaikki tiedot on {lion1.tyypi} , {lion1.hiuksenpituus} hiukset , {lion1.paino} kg , sen ääni {lion1.aani}")
-print(f"lion2 kaikki tiedot on {lion2.tyypi} , {lion2.hiuksenpituus} hiukset , {lion2.paino} kg , sen ääni {lion2.aani}")
-print(f"lion3 kaikki tiedot on {lion3.tyypi} , {lion3.hiuksenpituus} hiukset , {lion3.paino} kg , sen ääni {lion3.aani}")
+# k3 ليس أوبجكت جديد، بل يشير لنفس الأوبجكت k1 في الذاكرة
+k3 = k1
 
-# طباعة عدد الأسود الإجمالي للتأكد من عمل العداد
-print(f"Leijonia on luotu yhteensä: {lion.tehty}")
+# تعديل k3 سيتسبب بتعديل k1 مباشرة!
+k3.nimi = "Musti"
+print(f"k1:n nimi muuttui: {k1.nimi}")  # سيطبع Musti
 
-
-
-#class samakaltainen kun blueprint (عنا شخصيه بدنا ننشألها عمر, صحه, سرعه )
-class charecter :
-    def __init__ ( self , health , damage , speed ):   # self هون ثابته دايما بلمعادله 
-        self.health=health
-        self.damage=damage
-        self.speed=speed
-    def douple_speed(self):
-        self.speed *= 2 
-warrior=charecter(100 , 50 ,10 )
-ninja=charecter( 80 , 40 , 60 )
+# كود Garbage Collection: عند تغيير مرجع k2، يفقد "Rekku" مرجعه ويحذف من الذاكرة
+k2 = k1
 
 
-print(f"warrio speed is {warrior.speed}")
-print(f"ninja speed is {ninja.speed}")
-
-warrior.douple_speed()
-
-print(f"warrio speed is {warrior.speed}")
-print(f"ninja speed is {ninja.speed}")
-
-ninja.douple_speed()
-print(f"warrio speed is {warrior.speed}")
-print(f"ninja speed is {ninja.speed}")
-
-#===========================
-
+# ==========================================
+# Esimerkki 8: مراجع الأوبجكت في الذاكرة (Memory References & Garbage Collector)
+# ==========================================
 
 
 
