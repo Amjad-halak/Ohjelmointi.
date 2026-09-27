@@ -1,0 +1,42 @@
+⚠️ تنبيه للامتحان: هذه من أشهر النكشات الاختيارية! إذا وجد [{ }] في الكود وقام بطلب 
+sanakirja["key"]
+ مباشرة، فالنتيجة دائماً TypeError (Virhe).
+=========================
+١)
+ sanakirja = [{"name": "amjad", "ikä": 23, "hopes": "skater "}]
+
+print(sanakirja[0]["name"])  # ✅ يطبع: amjad
+===========================
+٢)
+sanakirja = {"name": "amjad", "ikä": 23, "hopes": "skater "}
+
+print(sanakirja["name"])  # ✅ يطبع: amjad
+
+========================
+
+class Pankkitili:
+    def __init__(self, saldo):
+        self.saldo = saldo
+
+    def nosta(self, maara):
+        if self.saldo >= maara:
+            self.saldo -= maara
+        else:
+            return "Ei katetta"
+
+tili = Pankkitili(100)
+tulos = tili.nosta(50)
+print(tulos)
+
+في الدالة، إذا تحقق الشرط if self.saldo >= maara: (100 أربَر من 50)، يُخصم المبلغ وتصبح السلسلة self.saldo = 50.
+
+لكن الدالة لا تحتوي على return في هذا الفرع!
+
+كلمة return "Ei katetta" توجد فقط في فرع الـ else.
+
+وبما أن الدالة نفذت الـ if وانتهت دون إرجاع قيمة، فإن بايثون ترجع تلقائياً None عند طباعة print(tulos).
+
+
+===========================
+
+

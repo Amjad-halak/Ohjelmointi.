@@ -221,5 +221,56 @@ k2 = k1
 # Esimerkki 8: مراجع الأوبجكت في الذاكرة (Memory References & Garbage Collector)
 # ==========================================
 
+class Tuote:
+    def __init__(self, nimi, hinta):
+        self.nimi = nimi
+        self.hinta = hinta
+
+t1 = Tuote("Maito", 1.5)
+print(t1)
+#==============
+
+class  opiskelja :
+    def __init__ (self , nimi , op = 0 ):
+        self.nimi = nimi 
+        self.op = op
+
+    def suorita_kurssi(self , pisteet ):
+        self.op += pisteet 
+        return self.op
+
+    def tulosta_tiedot(self):
+        return f"Opiskelija: {self.nimi}, Opintopisteet: {self.op}"
+
+p1 =opiskelja( "Matti ",15)
+p2 = opiskelja ( "amjad ",)
+
+
+print(p1.tulosta_tiedot())
+p1.suorita_kurssi(10)
+print(p1.tulosta_tiedot())
+p2.suorita_kurssi(5)
+print(p2.tulosta_tiedot())
+
+
+
+class Tuote : 
+    def __init__ (self , nimi , hinta ) :
+        self.nimi=nimi
+        self.hinta=hinta
+    def aseta_allenut(self , prosentti):
+        alenus = ((self.hinta * prosentti) / 100)
+        self.hinta = self.hinta - alenus
+        return self.hinta
+
+    def Tulosta_tiedot(self):
+        return f"Tuote : {self.nimi}  , Hinta {self.hinta}"
+
+T=Tuote("kahvi" , 4)
+uus_hinta = T.aseta_allenut(10)
+print(f"uus hinta on {uus_hinta}")
+print(T.Tulosta_tiedot())
+
+
 
 

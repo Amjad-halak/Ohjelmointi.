@@ -121,3 +121,75 @@ print(dat1.get_date())  # وضعنا print حتى يظهر الناتج على �
 #بمجرد إنشاء كائن الشخص p1 = Person()، يتم إنشاء تاريخ ميلاده تلقائياً في الذاكرة.
 
 #إذا قمت بحذف الشخص من الذاكرة، يتم حذف تاريخ ميلاده معه تلقائياً، مما يحافظ على نظافة الذاكرة ومنع البيانات الضائعة (Orphan Data).
+
+
+class Koira:
+    def __init__(self, nimi, rotu):
+        self.nimi = nimi
+        self.rotu = rotu
+
+    def hauku(self):
+        return f"Koira {self.nimi} haukuu!"
+
+
+class KoiraHoitola:
+    def __init__(self, nimi):
+        self.nimi = nimi
+        self.koirat = []  # يُفضل التسمية بالجمع koirat
+
+    def lisaa_koira(self, koira):
+        self.koirat.append(koira)
+
+    def kuuntele_hauku(self):
+        for k in self.koirat:
+            print(k.hauku())  # يستدعي دالة الكائن k مباشرة ورائعة جداً!
+
+
+# --- التجرية والتطبيق ---
+k1 = Koira("shbshb", "Golden Retriever")
+k2 = Koira("Reksi", "Poodle")
+
+hoitola = KoiraHoitola("Musti ja Mirri")
+
+# إضافة الكلاب
+hoitola.lisaa_koira(k1)
+hoitola.lisaa_koira(k2)
+
+# سماع الأصوات
+hoitola.kuuntele_hauku()
+
+
+
+
+class Kirja :
+
+    def __init__(self , nimi , kirjailija ):
+        self.nimi = nimi
+        self.kirjailija = kirjailija
+
+    def hae_tiedot(self):
+        return f"kirja {self.nimi} ja kirjoitaja {self.kirjailija} "
+class Kirjasto :
+
+    def __init__ (self , nimi ):
+        self.nimi=nimi
+        self.kirja = []
+
+    def lisaa_kirja (self , kirja ):
+        self.kirja.append(kirja)
+
+    def tulosta_kirjat (self):
+
+        for ktab in self.kirja :   
+            print(f"kirjaston kirjat {ktab.hae_tiedot()}")
+
+ki1=Kirja( "Kyberturvallisuu" , "Antti " )
+ki2=Kirja("Rich and poor father " , "Robert Kiyosaki " )
+
+kirjasto = Kirjasto ("keskustakirjasto oodi! ")
+
+kirjasto.lisaa_kirja(k1)
+kirjasto.lisaa_kirja(k2)
+kirjasto.tulosta_kirjat()
+
+

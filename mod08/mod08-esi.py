@@ -93,3 +93,33 @@ for player in players:
     print(f"Pelaajan {player['name']} taitotaso on {player['skill_level']}, hallussa:")
     for item in player["inventory"]:
         print(f"- {item}")
+
+
+
+
+sanakirja = {
+"name" :"amjad" ,
+"ikä" : 23,
+"hopes" : "skater "
+}
+
+sanakirja2= {
+    "city":"Espoo", 
+    "atudy" : "metropolia",
+    "hopes2":"sleep"
+}
+print(f"{sanakirja["name"]}\n{sanakirja ["ikä"]}\n{sanakirja["hopes"]}")
+print("\n")
+print(f"{sanakirja2.get("name")}\n{sanakirja2 .get("ikä")}\n{sanakirja2.get("hops")}")
+
+
+print(f"= ==================== =")
+for key in sanakirja :
+    print(f"{key}")
+
+print("=========== right is =============")
+
+yhteinen = sanakirja | sanakirja2
+for key , value in yhteinen.items() :      #نستخدم items ( )
+    print(f"{key} => {value}")                #داخل حلقات ال for بشكل اساسي  
+                                            #لقراءه كل من ال key , value 
