@@ -12,15 +12,15 @@ def rekisteroi_pelaja():
     print("--- YK-AGENTIN REKISTERÖINTI ---")
 
     # 1. Nimi
-    nimi = input("Syötä nimi: ").strip()
+    nimi = input("Syötä nimisi: ").strip()
     while nimi == "":
         print("Nimi ei voi olla tyhjä!")
-        nimi = input("Syötä nimi: ").strip()
+        nimi = input("Syötä nimisi: ").strip()
 
     # 2. Ikä
     while True:
         try:
-            ika = int(input("Syötä ikä: "))
+            ika = int(input("Syötä ikäsi: "))
             break
         except ValueError:
             print("Syötä ikä numerona!")
@@ -31,7 +31,7 @@ def rekisteroi_pelaja():
         sys.exit()
 
     # 3. Kokemus
-    print("\nValitse kokemus:")
+    print("\nValitse kokemus valvontaja tehtävään :")
     print("1. Alokas")
     print("2. Kokenut")
     print("3. Veteraani")
@@ -49,7 +49,7 @@ def rekisteroi_pelaja():
     if kielet == "":
         kielet = "Suomi"
 
-    # Kortin tulostus (بسيطة وبدون إيموجيات أو زخرفة زائدة)
+    # Kortin tulostus
     print("\n--- HENKILÖKORTTI ---")
     print("Nimi: " + nimi)
     print("Ikä: " + str(ika))

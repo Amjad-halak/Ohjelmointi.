@@ -14,15 +14,16 @@
 - [x] **Moduuli 4:** Tehtävät 1–4 (Kaikki tehty)
 - [x] **Moduuli 5:** Tehtävät 1–5 (Tehtävä 6 ei ole vielä valmis)
 - [x] **Moduuli 6:** Tehtävät 1–4 (Kaikki tehty)
+- [/] **Moduuli 7:** Osittain tehty (~50 %)
+- [/] **Moduuli 8:** Osittain tehty (~50 %)
+- [/] **Moduuli 9:** Tehtävät 1–2 tehty (~50 %)
+- [/] **Moduuli 10:** Tehtävät 1–2 tehty (~50 %)
+- [/] **Moduuli 11:** Tehtävä 1 tehty (~50 %)
 
 ---
 
 ## Tulevat tehtävät:
 
-- [ ] **Moduuli 7:** Ei vielä aloitettu
-- [ ] **Moduuli 8:** Ei vielä aloitettu
-- [ ] **Moduuli 9:** Ei vielä aloitettu
-- [ ] **Moduuli 10:** Ei vielä aloitettu
-- [ ] **Moduuli 11:** Ei vielä aloitettu
+- [ ] **Moduuli 7–11:** Loput tehtävät (puuttuva 50 %)
 
-*Huomautus: Kaikki tekemättömät tehtävät tehdään uusintakokeen jälkeen viikolla 40.*
+*Huomautus: Kaikki tekemättömät tehtävät tehdään lomalla.*

@@ -2,7 +2,7 @@ import math
 import random  
 
 # ==========================================
-# Tehtävä 1: Parametriton noppa (نرد عادي 1..6)
+# Tehtävä 1: Parametriton noppa 
 # ==========================================
 # Palauttaa satunnaisen silmäluvun väliltä 1..6 ja heittää kunnes tulee 6
 
@@ -20,7 +20,7 @@ while tulos != 6:
 
 
 # ==========================================
-# Tehtävä 2: Tahkollinen noppa (نرد مع عدد أوجه من المستخدم)
+# Tehtävä 2: Tahkollinen noppa 
 # ==========================================
 # Saa parametrina tahkojen määrän ja heittää kunnes saadaan maksimisilmäluku
 
@@ -40,7 +40,7 @@ while tulos != maksimi:
 
 
 # ==========================================
-# Tehtävä 3: Gallonat litroiksi (تحويل الجالونات إلى لترات)
+# Tehtävä 3: Gallonat litroiksi 
 # ==========================================
 # Muuntaa gallonat litroiksi kunnes syötetään negatiivinen luku
 
@@ -62,7 +62,7 @@ print("Lopetetaan (syötettiin negatiivinen luku).")
 
 
 # ==========================================
-# Tehtävä 4: Listan summa (حساب مجموع عناصر القائمة)
+# Tehtävä 4: Listan summa 
 # ==========================================
 # Saa parametrina listan kokonaislukuja ja palauttaa niiden summan
 
@@ -81,7 +81,7 @@ print(f"Listan lukujen summa: {summa}")
 
 
 # ==========================================
-# Tehtävä 5: Parittomien karsiminen (فلترة الأرقام الزوجية فقط)
+# Tehtävä 5: Parittomien karsiminen
 # ==========================================
 # Palauttaa uuden listan, josta on karsittu pois kaikki parittomat luvut
 
@@ -104,7 +104,7 @@ print(f"Karsittu lista (vain parilliset): {karsittu}")
 
 
 # ==========================================
-# Tehtävä 6: Pizzan yksikköhinta (مقارنة أسعار البيتزا per m²)
+# Tehtävä 6: Pizzan yksikköhinta 
 # ==========================================
 # Laskee pizzan neliömetrihinnan ja vertailee kaksi pizzaa
 
