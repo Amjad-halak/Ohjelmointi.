@@ -1,19 +1,23 @@
-# YK:n Rauhanturvaaja - Operaatio Rauha (UN Peacekeeper)
+# YK:n Rauhanturvaaja - Operaatio Rauha
 
 **Tekijä:** Amjad Alhalak  
-**Peiln_Nimi** Cat_Palauttaa_Rauha
+**Pelin nimi:** YK-seikkailupeli  
 
 ## Pelin Idea ja Tavoite
-Pelin tavoitteena on edistää YK:n kestävän kehityksen tavoitetta 
-        (**16: Rauha, oikeudenmukaisuus ja hyvä hallinto**).
+Pelin tavoitteena on edistää YK:n kestävän kehityksen tavoitetta **16 (Rauha, oikeudenmukaisuus ja hyvä hallinto)**.
 
-Pelaaja toimii YK:n rauhanturvaajana ja tarkkailijana konfliktin jälkeisellä alueella. Pelin tavoitteena on palauttaa järjestys, vahvistaa paikallisia instituutioita ja turvata kansalaisten perusoikeudet. Pelaaja tekee strategisia valintoja, jotka vaikuttavat alueen rauhankehitykseen.
+Pelaaja toimii YK:n rauhanturvaajana eri palvelusalueilla. Pelin tavoitteena on suorittaa tehtäviä, kerätä pisteitä ja esineitä sekä turvata alueen rauha.
 
-1. **Rauhansopimus:** Osapuolten erottaminen ja neuvottelut rauhan aikaansaamiseksi.
-2. **Turvallisuus ja suojelu:** Partiointi alueella, siviilien suojelu ja arjen turvallisuuden palauttaminen.
-3. **Sopeutuminen ja Jaksaminen:** Arjesta selviytyminen, henkinen jaksaminen ja toivon säilyttäminen vaikeassa ympäristössä.
+### Valittavat palvelusalueet ja tehtävät:
+1. **Lähi-itä:** Rauhansopimuksen neuvottelu tai humanitaarisen avun jakaminen.
+2. **Afrikka:** Siviilien suojaaminen tai vesipisteen rakentaminen.
+3. **Eurooppa:** Kokouksen järjestäminen tai raportin kirjoittaminen.
 
 ## Tekninen toteutus
-- Luokat: `Player`, `Room`, `Item`
-- Tiedostot: `intro.txt` ja `ohjeet.txt` lukeminen sekä pelitilanteen tallennus
-- 3 erilaista valintareittiä
+- **Modulaarinen rakenne:**
+  - `main.py`: Pelin pääohjelma ja valikkosilmukka.
+  - `luokat.py`: Luokat `Player` ja `Item`.
+  - `rekisterointi.py`: Pelaajan rekisteröinti ja iäntarkistus.
+- **Tiedostot:**
+  - Pelin ohjeiden lukeminen tiedostosta (`ohjeet.txt`).
+  - Pelitilanteen tallennus tiedostoon (`tallennus.txt`).
