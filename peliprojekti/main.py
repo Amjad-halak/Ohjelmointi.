@@ -4,19 +4,10 @@ from rekisterointi import rekisteroi_pelaja
 
 
 def lue_ohjeet():
-    print("\n---------------------------------")
-    print("PELIN OHJEET:")
-    print("1. Valitse ensin alue valikosta.")
-    print("2. Suorita tehtävä alueella.")
-    print("3. Kerää pisteitä ja esineitä.")
-    print("4. Muista tallentaa peli lopuksi.")
-    print("---------------------------------")
-    try:
-        tiedosto = open("ohjeet.txt", "r", encoding="utf-8")
-        print(tiedosto.read())
-        tiedosto.close()
-    except FileNotFoundError:
-        print("Lue lisätietoja ohjeet.txt tiedostosta.")
+ 
+    tiedosto = open("peliprojekti/ohjeet.txt", "r")
+    print(tiedosto.read())
+    tiedosto.close()
 
 
 def valitse_alue():
@@ -110,25 +101,30 @@ def suorita_tehtava(pelaaja, alue):
 
 
 def tallenna_peli(pelaaja, alue):
-    tiedosto = open("tallennus.txt", "w", encoding="utf-8")
+    tiedosto = open("peliprojekti/tallennus.txt", "w")
     teksti = pelaaja.nimi + "," + str(pelaaja.pisteet) + "," + alue + "\n"
     tiedosto.write(teksti)
     tiedosto.close()
+
     print("\nPeli tallennettu tiedostoon tallennus.txt!")
+    print("Tallennetut tiedot: " + teksti)  
 
 
 def nayta_pelin_tila(pelaaja, alue):
-    print("\n---------------------------------")
     print("AGENTTI: " + pelaaja.nimi)
     print("ALUE: " + alue)
     print("PISTEET: " + str(pelaaja.pisteet))
-    print("---------------------------------")
 
 
 def main():
     print("Tervetuloa YK-seikkailupeliin!")
 
     nimi, ika, kokemus, kielet = rekisteroi_pelaja()
+    
+    
+    if nimi is None:
+        return
+
     pelaaja = Player(nimi, ika, kokemus, kielet)
 
     pelaaja.ota_esine(Item("YK-Passi", "Henkilökortti"))
@@ -167,5 +163,4 @@ def main():
             print("\nVirheellinen valinta, yritä uudelleen.")
 
 
-if __name__ == "__main__":
-    main()
+main()
