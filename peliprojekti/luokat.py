@@ -17,7 +17,7 @@ class Player:
         self.kielet = kielet
         self.reppu = []
         self.pisteet = 0
-        self.moraali = 100
+        
 
     def ota_esine(self, esine):
         self.reppu.append(esine)
