@@ -1,0 +1,6 @@
+miten me saada se html näke tulokset js kansiolta .
+(document.querySelector("#target").innerHTML = `
+ ${} <br>`;)
+
+ fix the fucking autorefresh proplem 
+ 
