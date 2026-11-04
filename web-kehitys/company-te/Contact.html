@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">              
+    <title>Lämmittimesi - Ota yhteyttä</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ShamsLämpö</h1>
+        <nav>
+            <a href="index.html">Etusivu</a>
+            <a href="products.html">Tuotteet</a>
+            <a href="contact.html">Ota yhteyttä</a>
+        </nav>
+    </header>  
+
+    <main>
+    <section>
+        <h2>Ota yhteyttä</h2>
+        <p>Onko sinulla kysyttävää? Lähetä meille viesti!</p>
+
+        <!-- وسم النموذج يغلف الحقول والزر بالكامل -->
+        <form action="thx.html" method="get">
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Sähköposti:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Viesti:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Lähetä</button>
+        </form>
+    </section>  
+
+    <section>
+        <h3>Yhteystiedot</h3>
+        <p>Osoite: Aurinkokatu 77, Aurinkokunta</p>
+        <p>Puhelin: +999 00-000</p>
+        <p>Sähköposti: sunlammitys@sun.fi</p>
+        <img src="img/HSD76336.png" alt="Myymälän sijainti kartalla" width="600" height="400" loading="lazy">
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Lämmitä Ennen Kuin Häviät</p> 
+</footer>
+
+</body>
+</html>

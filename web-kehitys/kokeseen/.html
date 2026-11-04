@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- 
+  <!DOCTYPE html> = Määrittelee dokumenttityypin (HTML5)
+  يحدد نوع المستند أنه إصدار HTML5
+-->
+
+<html lang="fi" dir="ltr">
+<!-- 
+  Juurielementti (العنصر الجذر)
+  - lang="fi" (Kieli / اللغة): الفنلندية
+  - dir="ltr" (Tekstin suunta / اتجاه النص): Left-to-right (من اليسار لليمين)
+-->
+
+  <head>
+    <!-- Meta-tiedot ja linkitykset (معلومات خلف الكواليس والروابط) -->
+    
+    <title>Sivun otsikko</title>
+    <!-- Selaimen välilehdessä näkyvä nimi (اسم الصفحة في تبويب المتصفح) -->
+
+    <meta charset="UTF-8">
+    <!-- Merkistökoodaus (ترميز الحروف لدعم الحروف الخاصة مثل ä, ö واللغات) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsiivisuus (ضبط مقاس الشاشة للتجاوب مع الهواتف المحمولة) -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- CSS-tiedoston linkitys (ربط ملف التنسيقات الخارجي) -->
+    
+    <script src="script.js" defer></script>
+    <!-- JS-tiedoston linkitys (ربط ملف الجافاسكريبت) -->
+  </head>
+
+  <body>
+    <!-- Koko sivun näkyvä alue (الكيس الكبير الشامل لكل ما يظهر في الشاشة) -->
+
+    <header>
+      <!-- Sivuston yläosa / otsake (رأس الموقع واللوغو) -->
+      <nav>
+        <!-- Navigaatiopalkki (شريط التنقل والقوائم) -->
+        <ul>
+          <li><a href="index.html">Koti</a></li> <!-- Relatiivinen polku (رابط نسبي) -->
+          <li><a href="https://metropolia.fi">Metropolia</a></li> <!-- Absoluuttinen polku (رابط مطلق) -->
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Sivun pääsisältö (المحتوى الرئيسي والفريد فقط - وسم واحد فقط بالصفحة) -->
+      
+      <h1>Pääotsikko</h1> 
+      <!-- العنوان الرئيسي للمحتوى (ينصح بـ h1 واحد في main) -->
+
+      <section>
+        <!-- Osio 1: Uutiset (قسم الأخبار) -->
+        <h2>Uutiset</h2>
+        <p>Tämä on <strong>tärkeä</strong> teksti ja <span class="punainen">punainen sana</span>.</p>
+        <img src="img/kuva.jpg" alt="Uutisen kuva"> <!-- Kuva (صورة) -->
+      </section>
+
+      <hr> <!-- Vaakaviiva (خط أفقي فاصل) -->
+
+      <section>
+        <!-- Osio 2: Taulukko (قسم الجدول) -->
+        <h2>Taulukko</h2>
+        <table>
+          <tr>
+            <th>Nimi</th> <!-- Otsikkosolu (خلية عنوان) -->
+            <th>Ikä</th>  <!-- Otsikkosolu (خلية عنوان) -->
+          </tr>
+          <tr>
+            <td>Matti</td> <!-- Datasolu (خلية بيانات) -->
+            <td>25</td>    <!-- Datasolu (خلية بيانات) -->
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <!-- Osio 3: Lomake (قسم النموذج والحقول) -->
+        <h2>Ota yhteyttä</h2>
+        <form action="/laheta" method="POST">
+          <label for="nimi">Nimi:</label>
+          <input type="text" id="nimi" placeholder="Kirjoita nimi...">
+          
+          <label for="salasana">Salasana:</label>
+          <input type="password" id="salasana">
+
+          <button type="submit">Lähetä</button> <!-- Painike (زر الإرسال) -->
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <!-- Sivuston alaosa / alatunniste (أسفل الصفحة) -->
+      <p>Copyright 2026</p>
+    </footer>
+  </body>
+</html>

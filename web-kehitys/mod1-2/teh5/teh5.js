@@ -8,5 +8,16 @@
 "use strict"
 
 const vuosi = parseInt(prompt("syötä vuosiluvusi ? "))
-const karkausvuosi = vuosi % 4 
+
+const karkausvuosi = vuosi % 4 === 0 && (vuosi % 100 != 0) || (vuosi % 400 === 0);
+
+if (karkausvuosi === true) 
+    {document.querySelector("#target").innerHTML += `
+ nuomero ${vuosi}  on karkausvuosi <br>`  ;
+} 
+else {document.querySelector("#target").innerHTML += `
+ nuomero ${vuosi}  ei oo karkausvuosi <br>`;
+}
+
+
 
