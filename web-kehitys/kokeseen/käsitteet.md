@@ -74,3 +74,14 @@
 | **`<td>`**    | خلية بيانات عادية داخل الصف (Table Data).                                        |
 
 ---
+
+## 7. Listat (أنواع القوائم في HTML)
+
+| Elementti  | Kuvaus (الشرح بالفنلندية)             | الوظيفة والشرح بالعربي                     | Esimerkki                    |
+| :--------- | :------------------------------------ | :----------------------------------------- | :--------------------------- |
+| **`<ul>`** | Järjestämätön lista (pallomerkit)     | قائمة غير مرتبة (تنقيط)                    | `<ul><li>Kahvi</li></ul>`    |
+| **`<ol>`** | Järjestäytynyt lista (numerot)        | قائمة مرتبة بالأرقام (1, 2, 3)             | `<ol><li>Kahvi</li></ol>`    |
+| **`<li>`** | Listan yksittäinen alkio              | عنصر واحد داخل القائمة المرتبة/غير المرتبة | `<li>Tee</li>`               |
+| **`<dl>`** | Kuvauslista (käsitteet ja selitykset) | قائمة تعاريف ومصطلحات                      | `<dl>...</dl>`               |
+| **`<dt>`** | Kuvattava termi                       | اسم المصطلح المراد تعريفه                  | `<dt>Kahvi</dt>`             |
+| **`<dd>`** | Termin kuvaus/selitys                 | شرح وتفاصيل المصطلح                        | `<dd>Kuuma musta juoma</dd>` |

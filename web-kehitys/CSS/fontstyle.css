@@ -1,0 +1,26 @@
+/*   ===================================================================================
+                                    FONTSTYLE
+    =================================================================================== */
+
+h1 {
+    font-family: "Redaction 50", Georgia, serif; /* Kirjasinlaji - نوع الخط */
+    color: black; 
+    font-weight: unset; /* Fonttipaino - ثقل الخط */
+    font-size: 65px; /* Fonttikoko - حجم الخط */
+    font-style: italic; /* Fonttityyli - مائل */
+    text-decoration: underline dotted; /* Tekstin korostus - خط تحت النص نقطي */
+    
+}
+
+p {
+    font-family: "Redaction 35", Arial, sans-serif;
+    font-weight: inherit;
+    font-size: 25px;
+    text-decoration: none; /* Solid ليست قيمة لـ decoration، الافتراضي هو none */
+    
+    /* --- إضافات مهمة في الخطوط والنصوص --- */
+    line-height: 1.6; /* Riviväli - ارتفاع السطر / المسافة بين السطور */
+    letter-spacing: 1px; /* Kirjainväli - المسافة بين الحروف */
+    text-transform: capitalize; /* Tekstin muunnos - تحويل الحروف (uppercase / lowercase) */
+    text-align: left; /* Tekstin tasaus - محاذاة النص (center / right / justify) */
+}

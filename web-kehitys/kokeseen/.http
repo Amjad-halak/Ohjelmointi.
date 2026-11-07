@@ -1,0 +1,119 @@
+---
+# HTTP ja HTTPS - Täydellinen Tenttitiivistelmä (الملخص الشامل والنهائي للامتحان)
+---
+
+## 1. HTTP-perusteet (أساسيات بروتوكول HTTP)
+
+- **HTTP (Hypertext Transfer Protocol):** هو بروتوكول نقل النص الفائق، وهو اللغة المعياريه لنقل البيانات بين المتصفح والسيرفر.
+- **Asiakas-palvelin-malli (Client-Server Model):**
+- **Asiakas / Client (العميل):** الجهاز أو المتصفح (Chrome, Firefox) الذي يبدأ الاتصال ويرسل الطلب (**Pyyntö / Request**).
+- **Palvelin / Server (السيرفر/الخادم):** الكمبيوتر أو التطبيق (مثل Apache) الذي ينصت للاتصالات ويرد بالإجابة (**Vastaus / Response**).
+
+- **Tilaton protokolla (Stateless Protocol - غير حافظ للحالة):** كل طلب يرسله العميل يكون مستقلاً كلياً عن الطلبات السابقة، ولا يتذكر السيرفر الطلب السابق تلقائياً.
+- **Tekstipohjainen protokolla (نصي):** يرسل الأوامر والبيانات على شكل نص عادي (**Selkokieli / Plain text**).
+- **Kehittäjätyökalut (Developer Tools - F12):** يمكن فحص جميع طلبات واستجابات HTTP من تبويب الشبكة (**Network tab**) في المتصفح.
+
+---
+
+## 2. HTTP Pyyntö ja Vastaus (مكونات الـ Request والـ Response)
+
+### A. HTTP-Pyyntö (مكونات طلب العميل - Request Structure)
+
+عند إرسال طلب للسيرفر، يتكون من الأجزاء الرئيسية التالية:
+
+- **Pyyntömetodi (Request Method):** الإجراء المطلوب (مثل `GET /index.html HTTP/1.1`).
+- **Host:** اسم خادم الموقع (مثل `Host: example.com`).
+- **User-Agent:** سلسلة نصية توضح نوع متصفح العميل ونظام تشغيله.
+- **Accept:** أنواع المحتوى التي يستطيع العميل فهمها واستقبالها (مثل `text/html`).
+- **Accept-Language:** اللغة المفضلة للاستجابة.
+- **Content-Type:** نوع البيانات المرفقة في جسم الطلب (مثل `application/json`).
+- **Pyynnön runko (Request Body):** جسم الطلب، ويحتوي على البيانات المرسلة عند استخدام طرق `POST` أو `PUT`.
+
+### B. HTTP-Vastaus (مكونات استجابة السيرفر - Response Structure)
+
+- **Tilarivi (Status Line):** يحتوي على إصدار البروتوكول وكود الحالة (مثل `HTTP/1.1 200 OK`).
+- **Server:** نوع بروتوكول وبرنامج السيرفر وإصداره (مثل `Server: Apache/2.4.41`).
+- **Content-Type:** نوع المحتوى المردود للمتصفح (مثل `text/html`).
+- **Content-Length:** حجم محتوى الاستجابة بالبايت (Bytes).
+- **Date:** تاريخ ووقت توليد الاستجابة.
+- **Vastauksen runko (Response Body):** المحتوى الفعلي المردود (مثل كود الـ HTML) ويأتي بعد سطرين فارغين.
+
+---
+
+## 3. HTTP Pyyntömetodit (طرق الطلب الـ 4 الأساسية)
+
+| Metodi (الطريقة) | Kuvaus ja Käyttö (الوظيفة والاستخدام بالفنلندية والعربية)                                       | Esimerkki (مثال عملي)             |
+| ---------------- | ----------------------------------------------------------------------------------------------- | --------------------------------- |
+| **`GET`**        | **Hakee tietoa palvelimelta.** جلب وقراءة البيانات فقط من السيرفر بدون تغيير أي شيء في السيرفر. | فتح صفحة موقع أو جلب صورة/ملف CSS |
+| **`POST`**       | **Lähettää tietoa ja luo uuden resurssin.** إرسال بيانات جديدة للسيرفر داخل الـ Body.           | إرسال نموذج / تسجيل حساب جديد     |
+| **`PUT`**        | **Päivittää olemassa olevan resurssin.** تحديث وتعديل بيانات عنصر موجود بالكامل في السيرفر.     | تعديل بيانات الملف الشخصي         |
+| **`DELETE`**     | **Poistaa resurssin palvelimelta.** حذف عنصر أو مورد معين من السيرفر.                           | حذف منشور أو حساب                 |
+
+---
+
+## 4. HTTP Tilakoodit (أكواد حالة الاستجابة - Status Codes)
+
+| Statuskoodi | Ryhmä (الفئة بالفنلندية)         | Selitys (المعنى بالعربي)                          | Tärkeimmät esimerkit (أهم الأمثلة للامتحان)                                                     |
+| ----------- | -------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **`2xx`**   | **Onnistunut** (Success)         | Pyyntö käsiteltiin onnistuneesti (تم الطلب بنجاح) | **`200 OK`** (تم جلب أو إرسال الصفحة بنجاح)                                                     |
+| **`3xx`**   | **Uudelleenohjaus** (Redirect)   | Resurssi siirretty (إعادة توجيه لرابط آخر)        | **`301 Moved Permanently`** (تغيير الرابط دائمًا)                                               |
+| **`4xx`**   | **Asiakasvirhe** (Client Error)  | Virhe pyynnössä (خطأ من طرف العميل/المستخدم)      | **`404 Not Found`** (الصفحة غير موجودة)<br>**`401 Unauthorized`** (غير مصرح / يتطلب تسجيل دخول) |
+| **`5xx`**   | **Palvelinvirhe** (Server Error) | Virhe palvelimella (خطأ داخلي من السيرفر نفسه)    | **`500 Internal Server Error`** (عطل أو خطأ في السيرفر)                                         |
+
+<br>
+
+أي كود يأتي في الامتحان، انظري لـ أول رقم من اليسار:
+
+2xx ➔ نجاح (Onnistunut): أي كود يبدأ بـ 2 يعني أن العملية تمت بنجاح.
+
+3xx ➔ إعادة توجيه (Uudelleenohjaus): أي كود يبدأ بـ 3 يعني أن الصفحة انتقلت لرابط آخر.
+
+4xx ➔ خطأ من العميل/المستخدم (Asiakasvirhe): أي كود يبدأ بـ 4 يعني أن الخلل من عندك (كتبتِ الرابط خطأ، أو غير مسموح لكِ بالدخول).
+
+5xx ➔ خطأ من السيرفر (Palvelinvirhe): أي كود يبدأ بـ 5 يعني أن الموقع/السيرفر هو المصاب بعطل داخلي وليس جهازك.
+
+---
+
+## 5. HTTP vs HTTPS & Suojaus (الأمان والتشفير)
+
+### المشكلة في HTTP العادي:
+
+البيانات تخرج بنص عادي غير مشفر (**Selkokieli / Plain text**)، ويمكن لأي شخص يتقاطع مع الشبكة قراءتها ورؤيتها بسهولة.
+
+### الحل: بروتوكول HTTPS (HTTP Secure)
+
+- **Tarkoitus (الهدف):** جعل البيانات غير قابلة للقراءة (**Lukukelvoton**) لأي طرف خارجي عن طريق تشفيرها قبل خروجها من الجهاز.
+- **Salaus / Krüptaus (التشفير):** يتم تشفير البيانات، وحتى لو تم اعتراض الطلب تكون البيانات عبارة عن رموز عشوائية غير مفهومة.
+
+---
+
+## 6. SSL vs TLS ja TLS Handshake (بروتولات التشفير وخطوات المصافحة)
+
+| Protokolla                         | Kuvaus (الوظيفة والشرح بالفنلندية والعربية)                                                                                                   |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| **SSL (Secure Sockets Layer)**     | Vanha julkisen avaimen salausmenetelmä. **Ei enää käytössä** turvallisuussyistä. (الحل القديم، تم إيقافه لعدم أمانه).                         |
+| **TLS (Transport Layer Security)** | SSL-protokollan pohjalle luotu **nopeampi ja turvallisempi** standardi. Käytössä kaikilla nykysivustoilla. (الأسرع والأحدث والمستخدم حالياً). |
+
+### TLS Handshake (خطوات المصافحة والاتصال الآمن):
+
+1. **Yhteyden avaus (فتح الاتصال):** يتصل المتصفح بالسيرفر ويطلب اتصالاً آمناً ويحدد خوارزميات التشفير المدعومة.
+2. **Digitaalinen sertifikaatti (الشهادة الرقمية):** يرسل السيرفر وثيقة رقمية صادرة عن جهة خارجية موثوقة تُسمى سلطة إصدار الشهادات (**CA / Certificate Authority**).
+3. **Varmennus (التحقق):** يتحقق المتصفح من الشهادة (هل هي موثوقة ومطابقة للموقع؟).
+4. **Diffie-Hellman-algoritmi:** يتشارك الطرفان معرف الجلسة (**Session ID**) باستخدام خوارزمية Diffie-Hellman دون إرسال المفاتيح علناً.
+5. **Salattu istunto (الجلسة المشفّرة):** تُشفر جميع البيانات باستخدام مفتاح الجلسة (**Session Key**)، وينتهي هذا التشفير عند إغلاق الاتصال.
+
+---
+
+## 7. Metadata Sosiaalisessa Mediassa (معلومات الميتا لشبكات التواصل)
+
+يمكن استخدام وسم `<meta>` مع خاصية `property="og:..."` (Open Graph) لتحديد العنوان، الوصف، والصورة التي تظهر عند مشاركة رابط الموقع على شبكات التواصل (مثل Facebook):
+
+```html
+<meta property="og:title" content="Sivuston Otsikko" />
+<meta property="og:description" content="Sivuston kuvaus teksti..." />
+<meta property="og:image" content="https://example.com/kuva.jpg" />
+```
+
+---
+
+sso

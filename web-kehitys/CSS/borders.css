@@ -1,0 +1,37 @@
+/*   ===================================================================================
+                               ملف دراسي: الحدود والمسافات (Borders & Padding)
+     =================================================================================== */
+
+body {
+    background-color: black;
+}
+
+h1 {
+    font-size: 55px;
+    color: white;
+    text-transform: uppercase; /* Tekstin muunnos - تحويل النص لأحرف كبيرة */
+
+    /* --- الإطار / الحدود (Borders) --- */
+    border-style: double; /* Reunuksen tyyli - إطار مزدوج */
+    border-color: aqua;   /* Reunuksen väri - لون الإطار */
+    border-width: 5px;    /* Reunuksen paksuus - سمك الإطار */
+    border-top: 0;        /* إزالة الإطار العلوي */
+    border-left-color: blue; /* لون الإطار الأيسر فقط */
+
+}
+
+#p1{
+        border:5px solid;
+
+}
+
+p {
+    font-size: 30px;
+    color: bisque;
+    text-transform: lowercase; /* أحرف صغيرة */
+
+    /* --- طريقة المختصر للإطار + الحواف والمسافات --- */
+    border: 2px dashed gold;   /* Reunus - إطار مقطع بسُمك 2px ولون ذهبي */
+    border-radius: 10px;       /* Pyöristetyt kulmat - تدوير الحواف */
+    padding: 12px;             /* Sisämarginaali - مسافة داخلية بين النص والإطار */
+}

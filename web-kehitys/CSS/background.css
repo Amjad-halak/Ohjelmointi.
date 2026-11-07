@@ -1,0 +1,21 @@
+
+
+body{
+    background-image: url(../HTML/images/sky-8862862_1280.png);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    background-position:center;
+}
+
+h1{
+    background:linear-gradient(to left ,lightyellow , skyblue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+p{
+    background:linear-gradient(to right  ,lightyellow , skyblue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

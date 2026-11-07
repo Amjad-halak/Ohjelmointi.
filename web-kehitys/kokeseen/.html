@@ -53,7 +53,7 @@
       <section>
         <!-- Osio 1: Uutiset (قسم الأخبار) -->
         <h2>Uutiset</h2>
-        <p>Tämä on <strong>tärkeä</strong> teksti ja <span class="punainen">punainen sana</span>.</p>
+         <p>Tämä on <strong>tärkeä</strong> teksti ja <span class="punainen">punainen sana</span>.</p>  dukd <!-- span وظيفتها انو تخصص كلمه مثلا تعدل عليها كمله وحده من النص كله ف بتحطها بخانت ال span داخل ال p  -->
         <img src="img/kuva.jpg" alt="Uutisen kuva"> <!-- Kuva (صورة) -->
       </section>
 
@@ -74,20 +74,22 @@
         </table>
       </section>
 
-      <section>
-        <!-- Osio 3: Lomake (قسم النموذج والحقول) -->
-        <h2>Ota yhteyttä</h2>
-        <form action="/laheta" method="POST">
-          <label for="nimi">Nimi:</label>
-          <input type="text" id="nimi" placeholder="Kirjoita nimi...">
-          
-          <label for="salasana">Salasana:</label>
-          <input type="password" id="salasana">
+      <!-- هنا نستخدم div لأننا نجمع عناصر متنوعة داخل صندوق واحد (Card) -->
+<div class="uutuus-kortti">
+  <img src="tuote.jpg" alt="Tuote">
+  <h2>Tuotteen nimi</h2>
+  <p>Tämä on tuotteen kuvaus.</p>
+  <button>Osta</button>
+</div>
 
-          <button type="submit">Lähetä</button> <!-- Painike (زر الإرسال) -->
-        </form>
+      <section>
+            &lt; == >
+            &gt; == <
+            &amp; == &
+            &quot;  == ""
       </section>
 
+      
     </main>
 
     <footer>
