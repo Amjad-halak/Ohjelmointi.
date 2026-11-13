@@ -10,7 +10,7 @@
 const luku = parseInt(prompt("Anna randomi luku : "));
 let laskuri = 0 ;
 
-// نمر ع كل الاعداد من 1 للرقم نفسه 
+
 for(let i = 1 ; i <= luku ; i++) {
     if (luku % i === 0 ){
          laskuri++ ;    // ذيد العداد واحد لما تلاقي انو قسمه بدون باقي 

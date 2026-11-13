@@ -1,10 +1,26 @@
-// Kirjoita ohjelma, joka kysyy käyttäjän nimeä ja tervehtii sitten käyttäjää.
-//  Tulosta tervehdys HTML-dokumenttiin: Hei, Nimi! (2p)
+// Kirjoita ohjelma, joka kysyy käyttäjältä osallistujien lukumäärän. 
+// Tämän jälkeen ohjelma kysyy kaikkien osallistujien nimet.
+//  Lopuksi ohjelma tulostaa osallistujien nimet 
+// verkkosivulle numeroituna luettelona (<ol>) aakkosjärjestyksessä. (2p)
+
 "use strict";
 
-const nimi =prompt("sun nimi ? ");
+const osamaar = parseInt(prompt("Anna osallistujien määrä: "));
+const osallistujat = [];
 
-console.log(" terve " + nimi + ".");
+for (let i = 0; i < osamaar; i++) {
+    const nimi = prompt("Anna osallistujan nimi: ");
+    osallistujat.push(nimi);
+}
 
-document.querySelector("#target").innerHTML = `
-YOUR FUCKING NAME IS : ${nimi} <br>`;
+
+osallistujat.sort();
+
+
+const target = document.querySelector("#target");
+
+target.innerHTML += "<ol>";
+for (let i = 0; i < osallistujat.length; i++) {
+    target.innerHTML += `<li>${osallistujat[i]}</li>`;
+}
+target.innerHTML += "</ol>";

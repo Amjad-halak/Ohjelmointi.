@@ -1,24 +1,23 @@
-// Kirjoita ohjelma, joka kysyy käyttäjältä kokonaisluvun ja kertoo, onko luku alkuluku. (2p)
-// Alkuluku on ykköstä suurempi kokonaisluku, joka on jaollinen vain luvulla 1 ja itsellään.
-// Esimerkiksi 13 on alkuluku, koska sen voi jakaa vain luvuilla 1 ja 13 niin, että tulos on kokonaisluku.
-// Sen sijaan esimerkiksi 21 ei ole alkuluku, koska sen voi jakaa myös luvuilla 3 ja 7.
-// Tulosta tulos HTML-dokumenttiin.
-
+// Kirjoita funktio nimeltä even(), jonka parametri on lukuja sisältävä taulukko. Funktio palauttaa uuden (yleensä lyhyemmän) taulukon, 
+// jossa ovat alkuperäisen taulukon parilliset luvut. Funktio ei saa muuttaa alkuperäistä taulukkoa. (3p)
+// Esimerkki: Kolmialkioisessa taulukossa ovat alkiot 2, 7 ja 4. Funktio palauttaa kaksialkioisen taulukon, jossa ovat alkiot 2 ja 4.
+// Tulosta pääohjelmassa funktiokutsun jälkeen sekä alkuperäinen että uusi taulukko konsoliin.
+// Voit kirjoittaa taulukon suoraan koodiin. prompt()-funktiota ei tarvita.
 "use strict"
 
+function even (numerot){
+    let parilliset=[]
+    for (const numero of numerot) 
+        if (numero % 2 === 0)
+        {parilliset.push(numero)};
+    return parilliset
+};
 
-const luku = parseInt(prompt("Anna randomi luku : "));
-let laskuri = 0 ;
+const luvut = [ 2 , 7 , 4 , 11 ];
 
-// نمر ع كل الاعداد من 1 للرقم نفسه 
-for(let i = 1 ; i <= luku ; i++) {
-    if (luku % i === 0 ){
-         laskuri++ ;    // ذيد العداد واحد لما تلاقي انو قسمه بدون باقي 
-    }
-}
-if (laskuri === 2) {
-    document.querySelector("#target").innerHTML += `Lukusi ${luku} on alkuluku <br>`;
-} else {
-    document.querySelector("#target").innerHTML += `Lukusi ${luku} ei ole alkuluku <br>`;
-}
+const uudetluvut = even(luvut);
 
+console.log(luvut);
+console.log("even luvut" , {uudetluvut});
+
+    

@@ -7,7 +7,7 @@
 
 const määrä = parseInt(prompt("Anna heitto määrä:"));
 
-const mkan = [];
+const n1 = [];
 
 let heitto = 0;
 
@@ -17,14 +17,14 @@ while (heitto < määrä) {
   const noppa = Math.floor(Math.random() * 6) + 1;
   
 
-  mkan.push(noppa);
+  n1.push(noppa);
 
   heitto++;
 }
 
 let summa = 0;
-for (let i = 0; i < mkan.length; i++) {
-  summa += mkan[i]; 
+for (let i = 0; i < n1.length; i++) {
+  summa += n1[i]; 
 }
 
 document.querySelector("#target").innerHTML += `Heittojen tulosten summa on: ${summa} <br>`;

@@ -1,23 +1,26 @@
-// Kirjoita ohjelma, joka pyytää käyttäjää syöttämään vuosiluvun ja ilmoittaa,
-// onko vuosi karkausvuosi. 
-// Vuosi on karkausvuosi, jos se on jaollinen neljällä. 
-// Sadalla jaolliset vuodet ovat kuitenkin karkausvuosia vain, 
-// jos ne ovat jaollisia myös neljälläsadalla. 
-// Tulosta tulos HTML-dokumenttiin. (3p)
+// Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. 
+// Kun käyttäjä syöttää luvun, jonka hän on jo aiemmin syöttänyt,
+//  ohjelma ilmoittaa, että luku on jo annettu,
+//  lopettaa toimintansa ja tulostaa kaikki annetut luvut konsoliin nousevassa järjestyksessä. (2p)
+"use strict";
 
-"use strict"
 
-const vuosi = parseInt(prompt("syötä vuosiluvusi ? "))
+const luvut = [];
 
-const karkausvuosi = vuosi % 4 === 0 && (vuosi % 100 != 0) || (vuosi % 400 === 0);
-
-if (karkausvuosi === true) 
-    {document.querySelector("#target").innerHTML += `
- nuomero ${vuosi}  on karkausvuosi <br>`  ;
-} 
-else {document.querySelector("#target").innerHTML += `
- nuomero ${vuosi}  ei oo karkausvuosi <br>`;
+while (true) {
+    const luku = parseInt(prompt("Anna luku: "));
+    
+    // الفحص: هل الرقم تم إدخاله مسبقاً؟
+    if (luvut.includes(luku)) {
+        console.log("warning !");
+        break; // الخروج من حلقة التكرار
+    } else {
+        luvut.push(luku);
+    }
 }
 
 
+luvut.sort((a, b) => a - b);
 
+
+console.log(luvut);

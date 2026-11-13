@@ -1,24 +1,34 @@
-// Kirjoita ohjelma, joka kysyy käyttäjältä kokonaisluvun ja kertoo, onko luku alkuluku. (2p)
-// Alkuluku on ykköstä suurempi kokonaisluku, joka on jaollinen vain luvulla 1 ja itsellään.
-// Esimerkiksi 13 on alkuluku, koska sen voi jakaa vain luvuilla 1 ja 13 niin, että tulos on kokonaisluku.
-// Sen sijaan esimerkiksi 21 ei ole alkuluku, koska sen voi jakaa myös luvuilla 3 ja 7.
-// Tulosta tulos HTML-dokumenttiin.
+// Kirjoita ohjelma, joka kysyy käyttäjältä noppien lukumäärän ja silmälukujen summan, josta käyttäjä on kiinnostunut. Ohjelma selvittää, millä todennäköisyydellä annettu määrä noppia tuottaa annetun silmälukujen summan. Jos käyttäjä esimerkiksi syöttää noppien lukumääräksi 3 ja silmälukujen summaksi 17, ohjelma laskee todennäköisyyden sille, että kolmen nopan silmälukujen summa on 17. (5p)
+// Ratkaise ongelma simuloimalla: heitä annettua määrää noppia for-silmukassa monta kertaa (esim. 10 000 kertaa) ja laske, kuinka suuressa osassa heittokerroista silmälukujen summa oli käyttäjän antama summa.
+// Tulosta tulos HTML-dokumenttiin:
+// Todennäköisyys saada summa 7 kahdella nopalla on 15.64%
+// Voit rajoittaa desimaalien määrää metodilla toFixed().
+// Testiarvoja:
+// 2 noppaa, summa 7: todennäköisyys on noin 15–17 %
+// 3 noppaa, summa 15: todennäköisyys on noin 5 %
 
-"use strict"
+// (بداية العداد ; الشرط ; طريقة الزيادة)
+"use strict";
 
+const noppat_määrä = parseInt(prompt("Anna noppien määrä: "));
+const haluttusumma = parseInt(prompt("Anna haluttu summa: "));
 
-const luku = parseInt(prompt("Anna randomi luku : "));
-let laskuri = 0 ;
+const Toisita = 10000; 
+let osumat = 0;
 
-// نمر ع كل الاعداد من 1 للرقم نفسه 
-for(let i = 1 ; i <= luku ; i++) {
-    if (luku % i === 0 ){
-         laskuri++ ;    // ذيد العداد واحد لما تلاقي انو قسمه بدون باقي 
+for (let i = 0; i < Toisita; i++) {
+    let heittosumma = 0;
+
+    for (let j = 0; j < noppat_määrä; j++) {
+        let noppa = Math.floor(Math.random() * 6) + 1;
+        heittosumma += noppa;
+    }
+
+    if (heittosumma === haluttusumma) {
+        osumat++;
     }
 }
-if (laskuri === 2) {
-    document.querySelector("#target").innerHTML += `Lukusi ${luku} on alkuluku <br>`;
-} else {
-    document.querySelector("#target").innerHTML += `Lukusi ${luku} ei ole alkuluku <br>`;
-}
 
+const todennakoisyys = ((osumat / Toisita) * 100).toFixed(2);
+
+document.querySelector("#target").innerHTML += `Todennäköisyys saada summa ${haluttusumma} ${noppat_määrä} nopalla on ${todennakoisyys}% <br>`;
