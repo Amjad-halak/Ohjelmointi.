@@ -1,0 +1,96 @@
+/* ==========================================================================
+   ملف style.css - أساسيات التنسيق وربط العناصر
+   ========================================================================== */
+
+/* تنسيق عام للصفحة */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #222;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* تنسيق البطاقات (Class Selector يبدأ بنقطة .) */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* تنسيق عناصر النموذج */
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* صندوق عرض النتائج */
+.result-box {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #eef2ff;
+    border-left: 4px solid #2563eb;
+    font-weight: bold;
+}
+
+/* شبكة بطاقات نتائج الـ API */
+.grid-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.grid-results article {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    width: 180px;
+    text-align: center;
+    background: #fafafa;
+}
+
+.grid-results img {
+    width: 100%;
+    border-radius: 4px;
+}

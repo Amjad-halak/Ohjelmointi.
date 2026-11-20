@@ -1,21 +1,34 @@
+"use strict";
+
+// ==========================================
+// 1. جلب عناصر الصفحة (DOM Elements)
+// ==========================================
 const decreaseBtn = document.getElementById("decreaseBtn");
-const resetBtn = document.getElementById("resetBtn");
+const resetBtn    = document.getElementById("resetBtn");
 const increaseBtn = document.getElementById("increaseBtn");
-const countlabel =  document.getElementById("countlabel");
-let count = 0
+const countLabel  = document.getElementById("countlabel");
+
+// المتغير الأساسي للعدّاد (نستخدم let لأن قيمته ستتغير)
+let count = 0;
 
 
-increaseBtn.onclick = function(){
-    count++
-countlabel.textContent = count;
-}
+// 2. برمجة الأزرار (Button Events)
+// ==========================================
 
-decreaseBtn.onclick = function(){
-    count--
-countlabel.textContent = count;
-}
+// زر الزيادة (+1):
+increaseBtn.onclick = function () {
+    count++;
+    countLabel.textContent = count;
+};
 
-resetBtn.onclick = function(){
-    count = 0
-countlabel.textContent = count;
-}
+// زر النقصان (-1):
+decreaseBtn.onclick = function () {
+    count--;
+    countLabel.textContent = count;
+};
+
+// زر التصفير (0):
+resetBtn.onclick = function () {
+    count = 0;
+    countLabel.textContent = count;
+};

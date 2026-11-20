@@ -1,7 +1,6 @@
-document.querySelector("#target").innerHTML = `
-YOUR FUCKING NAME IS : ${objekti} <br>`;  //tämän br vaihtele HTML käytynty mukaan esi ( ul , li , th .......)
+{/* <pre id="output"></pre>
+<script src="A.js"></script>
 
-const target = document.querySelector("#target");
-target.innerHTML += "<ul>";
 
-<script src="app.js" defer></script>
+
+document.getElementById("output").textContent =; */}

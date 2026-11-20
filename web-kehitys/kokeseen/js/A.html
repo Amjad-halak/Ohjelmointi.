@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohjelmisto 2 - الشامل الكامل للامتحان</title>
+    
+    <!-- 1. ربط ملف التنسيق الخارجي CSS (دائماً داخل <head>) -->
+    <link rel="stylesheet" href="A.css">
+    
+    <!-- 2. ربط ملف الجافاسكريبت الخارجي JS مع defer ليعمل بعد تحميل الصفحة بالكامل -->
+    <script src="A.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>ملخص Ohjelmisto 2 الشامل (Metropolia AMK)</h1>
+        <p>هذا الملف يربط HTML + CSS + JavaScript عملياً في مكان واحد</p>
+    </header>
+
+    <main>
+        <!-- القسم 1: التحكم بالـ DOM والأحداث البسيطة (Events) -->
+        <section class="card">
+            <h2>1. DOM & Click Events (العداد وتغيير النصوص)</h2>
+            <p id="status-text">اضغط على الزر لتجربة تغيير النص والعداد</p>
+            <p>العداد الحالي: <strong id="counter-value">0</strong></p>
+            <button id="btn-plus" type="button">+ زيادة</button>
+            <button id="btn-reset" type="button">تصفير</button>
+        </section>
+
+        <!-- القسم 2: القوائم الديناميكية والمصفوفات (Arrays + Loops + createElement) -->
+        <section class="card">
+            <h2>2. Dynamic List (بناء قائمة من مصفوفة)</h2>
+            <button id="btn-load-list" type="button">اعرض المواد الدراسية</button>
+            <!-- قائمة فارغة سنملؤها من الجافاسكريبت عبر createElement و appendChild -->
+            <ul id="courses-list"></ul>
+        </section>
+
+        <!-- القسم 3: النماذج وقراءة المدخلات (Forms + Inputs + Select) -->
+        <section class="card">
+            <h2>3. Forms & Inputs (الطريقة المبسطة داخل Label)</h2>
+            <form id="user-form">
+                <label>الاسم الأول:
+                    <input id="first-name" type="text" placeholder="اكتب اسمك..." required>
+                </label>
+
+                <label>التحية:
+                    <select id="greeting-select">
+                        <option value="Hello">Hello</option>
+                        <option value="Moi">Moi</option>
+                        <option value="Tervetuloa">Tervetuloa</option>
+                    </select>
+                </label>
+
+                <button type="submit">إرسال النموذج</button>
+            </form>
+            <!-- صندوق فارغ لعرض نتيجة النموذج -->
+            <div id="form-result" class="result-box"></div>
+        </section>
+
+        <!-- القسم 4: جلب البيانات من الإنترنت (Async/Await + Fetch GET) -->
+        <section class="card">
+            <h2>4. Fetch API (بحث حي من TVMaze API)</h2>
+            <form id="search-form">
+                <label>ابحث عن ممثل (مثال: Tom أو Emma):
+                    <input id="search-query" type="text" placeholder="اكتب اسماً بالإنجليزية..." required>
+                </label>
+                <button type="submit">بحث (Fetch GET)</button>
+            </form>
+            <div id="api-results" class="grid-results"></div>
+        </section>
+
+        <!-- القسم 5: إرسال البيانات للسيرفر (Fetch POST + JSON.stringify) -->
+        <section class="card">
+            <h2>5. Fetch POST (إرسال بيانات JSON للسيرفر)</h2>
+            <button id="btn-send-post" type="button">أرسل بيانات تجريبية (POST)</button>
+            <pre id="post-result" class="result-box"></pre>
+        </section>
+    </main>
+
+</body>
+</html>

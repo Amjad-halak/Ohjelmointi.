@@ -1,31 +1,56 @@
-"use strict"
+"use strict";
 
-// Math.floor(Math.random() * 4) + 1;
+// ==========================================
+// 1. العمليات الحسابية والاختصارات (Arithmetic)
+// ==========================================
+let students = 31;
 
-let students = 31
+// الطريقة العادية         // الاختصار (Shorthand)
+// students = students + 1;  =>  students += 1;  (أو students++)
+// students = students - 2;  =>  students -= 2;
+// students = students * 2;  =>  students *= 2;
+// students = students / 2;  =>  students /= 2;
+// students = students ** 2; =>  students **= 2; (الأس)
+// students = students % 2;  =>  students %= 2;  (باقي القسمة)
 
-// students ++
-// students = students - 2 
-// students = students * 2 
-// students = students / 2 
-// students = students ** 2
-// let extrastudents  = students % 2 
-
-// students += 1 
-// students -=12
-// students *=3
-// students /=2
-// students **=2
-// students %= 2 
-
-console.log(students)
-// 1.paremthesis ()
-// 2.exponents  **
-// 3. multiplication  * & division  / & modulo %
-// 4. addition  + & subtraction  - 
-
-let resuets =  1 + 2 * 3 + 4 ** 2  / 2
-console.log(resuets)
+console.log(students);
 
 
+// 2. أولوية العمليات الحسابية (Operator Precedence)
+// ==========================================
+// 1. الأقواس: parenthesis ()
+// 2. الأسس: exponents **
+// 3. الضرب، القسمة، باقي القسمة: *  /  %
+// 4. الجمع والطرح: +  -
 
+let results = 1 + 2 * 3 + 4 ** 2 / 2; // الناتج: 1 + 6 + (16 / 2) = 15
+console.log(results);
+
+
+// 3. الأرقام العشوائية (Random Numbers)
+// ==========================================
+// توليد رقم عشوائي صحيح من 1 إلى 4:
+let randomNum = Math.floor(Math.random() * 4) + 1;
+
+
+// 4. الإسناد، المقارنة، والمنطق (ero = , == , === väli)
+// ==========================================
+// =   : إسناد قيمة إلى متغيّر (let x = 5)
+// ==  : مقارنة القيمة فقط ("5 == "5  => true)
+// === : مقارنة القيمة والنوع معاً - يساوي تماماً ("5 === "5 => false)
+// !== : لا يساوي تماماً في القيمة أو النوع ("5 !== "5 => true)
+// &&  : (و / AND) يجب تحقق الشرطين معاً (true && false => false)
+// ||  : (أو / OR) يكفي تحقق شرط واحد فقط (true || false => true)
+
+
+let x = 3.6;
+
+Math.round(x);      // تقريب لأقرب عدد صحيح -> 4
+Math.floor(x);      // تقريب للأسفل دائماً -> 3
+Math.ceil(x);       // تقريب للأعلى دائماً -> 4
+Math.trunc(x);      // حذف الفاصلة العشرية فقط -> 3
+Math.pow(2, 3);     // الأس (2 أس 3 = 8)
+Math.sqrt(16);      // الجذر التربيعي -> 4
+Math.abs(-5);       // القيمة المطلقة (تحويل السالب لموجب) -> 5
+Math.max(10, 5, 20);// أكبر رقم -> 20
+Math.min(10, 5, 20);// أصغر رقم -> 5
